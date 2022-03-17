@@ -1,5 +1,8 @@
-h1, h2, h3, p, td, li {
+/* darkColoured */
+
+h1, h2, h3, p, td, li, label{
   margin-bottom: 10px;
+  color: rgb(255, 255, 255);
 }
 
 div > *{
@@ -9,14 +12,14 @@ div > *{
 h1 {
   text-align: center;
   font-size: 45px;
-  text-shadow: 3px 3px 1px rgb(68, 212, 200);
+  text-shadow: 3px 3px 1px rgb(124, 255, 244);
 }
 
 h2 {
   text-align: center;
   font-size: 35px;
   font-family: "Lobster", cursive;
-  text-shadow: 3px 3px 1px rgb(255, 179, 79);
+  text-shadow: 3px 3px 1px rgb(255, 0, 0);
 }
 
 h3 {
@@ -29,17 +32,18 @@ h4, p, td, li {
 
 h1:hover,
 h2:hover{
-  background-color: black;
-  color:red;
+  background-color: rgb(51, 255, 0);
+  color:rgb(4, 0, 255);
   text-shadow:none;
 }
 .cold::first-line{
-  background-color: aqua;
-  color: rgb(0, 174, 255);
+  background-color: rgb(5, 146, 0);
+  color: rgb(0, 0, 0);
 }
-li > a { 
+.green > li{ 
   background-color: chartreuse;
   color: rgb(47, 102, 15);
+  width: 8%;
 }
 
 /* .outBody {
@@ -54,13 +58,13 @@ li > a {
 } */
 
 html{
-  border: 8px solid yellow;
-  background-color: rgb(255, 199, 248);
+  border: 8px solid rgb(255, 0, 0);
+  background-color: rgb(134, 0, 0);
 }
 
 body{
   margin: 20px;
-  background-color: aliceblue;
+  background-color: rgb(4, 4, 5);
 }
 
 .changeName{
@@ -73,4 +77,22 @@ body{
   width: 150px;
   background-color: deepskyblue;
   color:darkblue;
+}
+
+aside{
+  opacity: 0.8;
+  top:30px;
+  position: fixed;
+  margin-left: 1400px;
+  border: 5px solid rgb(255, 251, 0);
+  background-color: rgb(131, 131, 131);
+  color: rgb(133, 255, 109);
+}
+
+.white{
+  color:black;
+}
+
+.center{
+  text-align: center;
 }

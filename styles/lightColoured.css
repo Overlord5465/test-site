@@ -1,0 +1,93 @@
+/* lightColoured */
+
+h1, h2, h3, p, td, li {
+  margin-bottom: 10px;
+}
+
+div > *{
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  text-shadow: 3px 3px 1px rgb(68, 212, 200);
+}
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Lobster", cursive;
+  text-shadow: 3px 3px 1px rgb(255, 179, 79);
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4, p, td, li {
+  font-size: 20px;
+}
+
+h1:hover,
+h2:hover{
+  background-color: black;
+  color:red;
+  text-shadow:none;
+}
+.cold::first-line{
+  background-color: aqua;
+  color: rgb(0, 174, 255);
+}
+.green > li{ 
+  background-color: chartreuse;
+  color: rgb(47, 102, 15);
+  width: 8%;
+}
+
+/* .outBody {
+  margin: 0%;
+  border: 8px solid yellow;
+  background-color: rgb(255, 199, 248);
+} */
+
+/* .inBody{
+  margin: 20px;
+  background-color: aliceblue;
+} */
+
+html{
+  border: 8px solid yellow;
+  background-color: rgb(255, 199, 248);
+}
+
+body{
+  margin: 20px;
+  background-color: aliceblue;
+}
+
+.changeName{
+  width: 150px;
+  border: 5px solid rgb(67, 220, 231);
+  color:blue;
+}
+
+.changeName:hover{
+  width: 150px;
+  background-color: deepskyblue;
+  color:darkblue;
+}
+
+aside{
+  opacity: 0.8;
+  top:30px;
+  position: fixed;
+  margin-left: 1400px;
+  border: 5px solid blueviolet;
+  background-color: rgb(255, 255, 255);
+  color: rgb(8, 121, 250);
+}
+
+.center{
+  text-align: center;
+}

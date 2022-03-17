@@ -6,8 +6,8 @@
 		<meta charset="utf-8">
 		<meta name="author" content="Overlord5465">
 		<meta name="description" content="test-site">
+		<link rel="stylesheet" href="styles/lightColoured.css">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 		<title>test-site</title>
 
@@ -15,9 +15,25 @@
 
 	<body>
 		<div>
-			<h1>(Оглавление)</h1>
-			<button>Change name</button>
+			<h1 id="Приветствие">(Оглавление)</h1> 
 			<p>(Текст)</p>
+
+			<aside>
+				<button>Change name</button>
+				<button>Change style</button>
+				<p class="center"><a href="#Приветствие">Приветствие</a></p>
+				<ol>
+					<li><a href="#Виды_шрифта">Виды шрифта</a></li>
+					<li><a href="#Странные_штуки">Странные_штуки</a></li>
+					<li><a href="#Списки">Списки</a></li>
+					<li><a href="#Атрибуты">Атрибуты</a></li>
+					<li><a href="#Картинки">Картинки</a></li>
+					<li><a href="#Таблицы">Таблицы</a></li>
+					<li><a href="#CSS">CSS</a></li>
+					<li><a href="#Формы">Формы</a></li>
+					<li><a href="#Веселье_продолжается!">Веселье продолжается!</a></li>
+				</ol>
+			</aside>
 
 			<h2 id="Виды_шрифта">(Пункт №1) Виды шрифта</h2>
 			<p>(Текст)</p>
@@ -35,7 +51,7 @@
 			<p>(Текст) <small>Уменьшенный</small></p>
 			<hr />
 			
-			<h2>(Пункт №2) Странные штуки</h2>
+			<h2 id="Странные_штуки">(Пункт №2) Странные штуки</h2>
 			<p>(Текст)</p>
 			
 			<h3>(Подпункт) Обрывание строки</h3>
@@ -45,7 +61,7 @@
 			<p>(Текст)</p>
 			<hr />
 
-			<h2>(Пункт №3) Списки</h2>
+			<h2 id="Списки">(Пункт №3) Списки</h2>
 			<p>(Текст)</p>
 			
 			<h3>(Подпункт) Пронумерованный</h3>
@@ -65,7 +81,7 @@
 			</ul>
 			<hr />
 
-			<h2>(Пункт №4) Атрибуты - то что пишем внутри открывающего тега добавляя ему свойства</h2>
+			<h2 id="Атрибуты">(Пункт №4) Атрибуты - то что пишем внутри открывающего тега добавляя ему свойства</h2>
 			<p>(Текст)</p>
 			
 			<h3 style="background-color:#CC99FF">(Подпункт) Атрибут для тегов содержащих текст меняющий цвет фона</h3>
@@ -102,14 +118,14 @@
 			</p>
 			<hr />
 
-			<h2>(Пункт №5)Да будут картинки!</h2>
+			<h2 id="Картинки">(Пункт №5)Да будут картинки!</h2>
 			<p>
 				(Текст) Элемент "img", атрибуты: "height=тут число", "width=тут число", title="тут текст, всплывает при наведении курсора на изображение", "src=тут путь" - показывает путь до нашей картинки, "alt=тут название картинки" - индентификатор для поисковиков (сам не до конца понимаю все плюсы и минусы этой штуковины так что от греха подальше не буду пользоваться, а то знаете эти авторские права, одну картинку выложил - пару сотен тысяч потерял). 
 			</p>
 			<p>
 				Вот список некоторых сервисов, на которых размещены как бесплатные, так и платные изображения:
 			</p>
-			<ul>
+			<ul class="green">
 				<li> <a target="blank" href=https://unsplash.com/>Unsplash</a> </li>
 				<li> <a target="blank" href=https://www.shutterstock.com/ru/>Shutterstock</a> </li>
 				<li> <a target="blank" href=https://pixabay.com/>Pixabay</a> </li>
@@ -135,7 +151,7 @@
 			</p> 
 			<hr />
 
-			<h2>(Пункт №6)Время для таблиц</h2>
+			<h2 id="Таблицы">(Пункт №6)Время для таблиц</h2>
 			<table border="1">
 				<tr>
 					<td width=500 text-align=middle>Ля!</td>
@@ -184,7 +200,7 @@
 				</tr>
 			</table>
 
-			<h2>(Пункт №7) CSS - Cascading Style Sheets. Мда... слишком заумные словечки, но надеюсь мы их выдержим</h2>
+			<h2 id="CSS">(Пункт №7) CSS - Cascading Style Sheets. Мда... слишком заумные словечки, но надеюсь мы их выдержим</h2>
 			<p>
 				(Текст) Если коротко, CSS помогает со всеми визуальными корректировками, 	что-то вроде косметички для html 
 				CSS используют с помощью тега-атрибута(когда как) style="А тут великое множесво вариантов 
@@ -193,13 +209,13 @@
 			</p>
 			<ul>
 				<li>style=color:green - <span style=color:green>Ой, текст стал зелёным!</span></li>
-				<li>style=background-color:yellow - <span style=background-color:yellow>Вау, фон текста пожелтел!</span></li>
+				<li>style=background-color:yellow - <span class='white' style=background-color:yellow>Вау, фон текста пожелтел!</span></li>
 				<li>style=background-image: url('тут у нас url картинки') - именно благодаря этому клочку кода у сайта такой фон</li>
 				<li>style="padding:1px;border:1px solid red" - <span style="padding:1px;border:1px solid red">Как? Когда успела появиться красная рамка?</span></li>
 			</ul>
 			<p>И т.д. и т.п.</p>
 
-			<h2>(Пункт №8) Формы</h2>
+			<h2 id="Формы">(Пункт №8) Формы</h2>
 			<form>
 				<label for="name">Ваше имя</label>
 				<input type="text" id="name" placeholder="Введите ваше имя..." >
@@ -210,6 +226,8 @@
 				<label for="hi">Ваше сообщение</label>
 				<textarea type="text" id="hi" placeholder="Введите ваше сообщение..." disabled="disabled"></textarea>>
 			</form>
+
+			<h2 id="Веселье_продолжается!"><a href="/pages/index.html">(Пункт №9)Веселье продолжается!</a></h2>
 			
 			<footer>
 				<p text-align=right>© Overlord5465</p>

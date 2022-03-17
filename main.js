@@ -1,17 +1,4 @@
-const myHeading = document.querySelector('h1');
-
-// if (myHeading.textContent === 'Hello world!'){
-
-// }
-
-// myHeading.onclick = function() {
-//   myHeading = 'Больно вообще-то, не кликай по мне больше пожалуйста'
-// }
-
-// document.querySelector('html').onclick = function() {
-//   alert('Ouch! Stop poking me!');
-// }
-
+// Меняет одну картинку на другую
 const myImage = document.querySelector('img');
 
 myImage.onclick = function() {
@@ -23,7 +10,14 @@ myImage.onclick = function() {
     }
 }
 
+// Кнопка смены имени и появление окна для ввода имени
+const myHeading = document.querySelector('h1');
 const myButton = document.querySelector('button');
+
+myButton.onclick = function() {
+  setUserName();
+}
+
 
 function setUserName() {
   let myName = prompt('Please enter your name.');
@@ -41,6 +35,22 @@ if(!localStorage.getItem('name')) {
   myHeading.textContent = 'Привет ' + storedName;
 }
 
-myButton.onclick = function() {
-  setUserName();
+
+// Кнопка для смены стиля сайта
+const myButton2 = document.querySelectorAll('button')[1];
+let style = document.getElementsByTagName('link')[0];
+let x = 0;
+
+myButton2.onclick = function() {
+  changedStyle();
+}
+
+function changedStyle(){
+  if(x === 0){
+    style.setAttribute('href', 'styles/darkColoured.css')
+    ++x;
+  }else{
+    style.setAttribute('href', 'styles/lightColoured.css')
+    --x;
+  }
 }
