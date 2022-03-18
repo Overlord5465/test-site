@@ -47,10 +47,10 @@ myButton2.onclick = function() {
 
 function changedStyle(){
   if(x === 0){
-    style.setAttribute('href', '../styles/darkColoured.css')
+    style.setAttribute('href', 'styles/darkColoured.css')
     ++x;
   }else{
-    style.setAttribute('href', '../styles/lightColoured.css')
+    style.setAttribute('href', 'styles/lightColoured.css')
     --x;
   }
 }
