@@ -1,18 +1,18 @@
-// Меняет одну картинку на другую
-const myImage = document.querySelector('img');
+// // Меняет одну картинку на другую
+// const myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    const mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/1.jpg') {
-      myImage.setAttribute ('src','images/2.jpg');
-    } else {
-      myImage.setAttribute ('src','images/1.jpg');
-    }
-}
+// myImage.onclick = function() {
+//     const mySrc = myImage.getAttribute('src');
+//     if(mySrc === '../images/1.jpg') {
+//       myImage.setAttribute ('src','../images/2.jpg');
+//     } else {
+//       myImage.setAttribute ('src','../images/1.jpg');
+//     }
+// }
 
 // Кнопка смены имени и появление окна для ввода имени
-const myHeading = document.querySelector('h1');
-const myButton = document.querySelector('button');
+let myHeading = document.querySelector('h1');
+let myButton = document.querySelector('button');
 
 myButton.onclick = function() {
   setUserName();
@@ -37,7 +37,7 @@ if(!localStorage.getItem('name')) {
 
 
 // Кнопка для смены стиля сайта
-const myButton2 = document.querySelectorAll('button')[1];
+let myButton2 = document.querySelectorAll('button')[1];
 let style = document.getElementsByTagName('link')[0];
 let x = 0;
 
@@ -47,10 +47,10 @@ myButton2.onclick = function() {
 
 function changedStyle(){
   if(x === 0){
-    style.setAttribute('href', 'styles/darkColoured.css')
+    style.setAttribute('href', '../styles/darkColoured.css')
     ++x;
   }else{
-    style.setAttribute('href', 'styles/lightColoured.css')
+    style.setAttribute('href', '../styles/lightColoured.css')
     --x;
   }
 }
