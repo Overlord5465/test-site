@@ -1,93 +1,88 @@
 /* lightColoured */
-
-h1, h2, h3, p, td, li {
-  margin-bottom: 10px;
+body{
+  margin: 0%;
+  background-color: blue;
 }
 
-div > *{
-  margin: 20px;
+#nav-header, 
+#nav-footer{
+  width: 100%;
+  height: 100px;
+  background-color: cornflowerblue;
+  margin: 0%;
+}
+
+#root{
+  font-size: 20px;
+  border-left: 20px;
+  border-right: 20px;
+  border-style: solid;
+  border-color: rgb(83, 235, 255);
+  display: grid;
+  grid-template-columns: minmax(0,0.5fr) minmax(0,3fr) minmax(0,15rem);
+  grid-gap: 3rem;
+  gap: 3rem;
+  grid-template-areas: "sidebar main toc";
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 40px;
+  background-color: rgb(255, 255, 255);
 }
 
 h1 {
   text-align: center;
   font-size: 45px;
-  text-shadow: 3px 3px 1px rgb(68, 212, 200);
+  text-shadow: 3px 3px 1px rgb(255, 251, 0);
 }
 
 h2 {
   text-align: center;
   font-size: 35px;
   font-family: "Lobster", cursive;
-  text-shadow: 3px 3px 1px rgb(255, 179, 79);
+  text-shadow: 3px 3px 1px rgb(255, 175, 71);
 }
 
 h3 {
   font-size: 25px;
 }
 
-h4, p, td, li {
-  font-size: 20px;
-}
-
-h1:hover,
+h1:hover, 
 h2:hover{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color:red;
-  text-shadow:none;
-}
-.cold::first-line{
-  background-color: aqua;
-  color: rgb(0, 174, 255);
-}
-.green > li{ 
-  background-color: chartreuse;
-  color: rgb(47, 102, 15);
-  width: 8%;
+  text-shadow: 3px 3px 1px rgb(255, 255, 255);
 }
 
-/* .outBody {
-  margin: 0%;
-  border: 8px solid yellow;
-  background-color: rgb(255, 199, 248);
-} */
-
-/* .inBody{
-  margin: 20px;
-  background-color: aliceblue;
-} */
-
-html{
-  border: 8px solid yellow;
-  background-color: rgb(255, 199, 248);
+table{
+  border: 1px solid black;
 }
 
-body{
-  margin: 20px;
-  background-color: aliceblue;
+td, 
+th{
+  border: 1px solid black;
+  text-align: center
 }
 
-.changeName{
-  width: 150px;
-  border: 5px solid rgb(67, 220, 231);
-  color:blue;
-}
-
-.changeName:hover{
-  width: 150px;
-  background-color: deepskyblue;
-  color:darkblue;
+th{
+  background-color: rgb(226, 226, 226);
 }
 
 aside{
   opacity: 0.8;
-  top:30px;
-  position: fixed;
-  margin-left: 1400px;
-  border: 5px solid blueviolet;
+  margin-top: 200px;
   background-color: rgb(255, 255, 255);
   color: rgb(8, 121, 250);
+  width: 250px;
+  height: 300px;
+  position: sticky;
+  top: 50px;
 }
 
-.center{
-  text-align: center;
+aside a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+aside a:hover{
+  color:aqua;
 }

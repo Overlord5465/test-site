@@ -1,14 +1,14 @@
-// // Меняет одну картинку на другую
-// const myImage = document.querySelector('img');
+// Меняет одну картинку на другую
+const myImage = document.querySelector('img');
 
-// myImage.onclick = function() {
-//     const mySrc = myImage.getAttribute('src');
-//     if(mySrc === '../images/1.jpg') {
-//       myImage.setAttribute ('src','../images/2.jpg');
-//     } else {
-//       myImage.setAttribute ('src','../images/1.jpg');
-//     }
-// }
+myImage.onclick = function() {
+    const mySrc = myImage.getAttribute('src');
+    if(mySrc === 'images/1.jpg') {
+      myImage.setAttribute ('src','images/2.jpg');
+    } else {
+      myImage.setAttribute ('src','images/1.jpg');
+    }
+}
 
 // Кнопка смены имени и появление окна для ввода имени
 let myHeading = document.querySelector('h1');
