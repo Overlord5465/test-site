@@ -156,16 +156,16 @@
 						<h2>(Пункт №6) Video, audio and iframe</h2>
 						<h3>Video</h3>
 						<video controls width="400" height="400" 
-						poster="/images/poster.png">
-							<source src="/videos/rabbit.mp4" type="video/mp4">
-							<source src="/videos/rabbit.webm" type="video/webm">
-							<track kind="subtitles" src="/videos/subtitles/rabbit.vtt" srclang="en">
-							<p>Ваш браузер не поддерживает HTML5 видео. Вот <a href="/videos/rabbit.mp4">ссылка на видео</a> взамен.</p>
+						poster="images/poster.png">
+							<source src="videos/rabbit.mp4" type="video/mp4">
+							<source src="videos/rabbit.webm" type="video/webm">
+							<track kind="subtitles" src="videos/subtitles/rabbit.vtt" srclang="en">
+							<p>Ваш браузер не поддерживает HTML5 видео. Вот <a href="videos/rabbit.mp4">ссылка на видео</a> взамен.</p>
 						</video>
 						<h3>Audio</h3>
 						<audio controls>
-							<source src="/audios/viper.mp3" type="audio/mp3">
-							<source src="/audios/viper.ogg" type="audio/ogg">
+							<source src="audios/viper.mp3" type="audio/mp3">
+							<source src="audios/viper.ogg" type="audio/ogg">
 							<p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
 						</audio>
 						<h3>Iframe</h3>
@@ -183,23 +183,23 @@
 					<section id="responsive-images">
 						<h2>(Пункт №8) Responsive images</h2>
 						<p>Для маленьких экранов маленькие изображения, а для больших большие.</p>
-						<img srcset="/images/elva-fairy-320w.jpg 320w,
-												/images/elva-fairy-480w.jpg 480w,
-												/images/elva-fairy-800w.jpg 800w"
+						<img srcset="images/elva-fairy-320w.jpg 320w,
+												images/elva-fairy-480w.jpg 480w,
+												images/elva-fairy-800w.jpg 800w"
 									sizes="(max-width: 320px) 280px,
 													(max-width: 480px) 440px,
 													800px"
-									src="/images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+									src="images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
 						<p>А тут фиг пойми что. Вроде с качеством как то связано, но не уверен :)</p>
-						<img srcset="/images/elva-fairy-320w.jpg,
-												/images/elva-fairy-480w.jpg 1.5x,
-												/images/elva-fairy-640w.jpg 2x"
-								src="/images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+						<img srcset="images/elva-fairy-320w.jpg,
+												images/elva-fairy-480w.jpg 1.5x,
+												images/elva-fairy-640w.jpg 2x"
+								src="images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 						<p>Когда на компе то обычная картинка, а коли на телефоне зайдём, то другую картинку подкинем (обрезаную чтобы к примеру людишек по центру хорошо было видно)</p>
 						<picture>
 							<source media="(max-width: 799px) srcset="elva-480w-close-portrait.jpg">
-							<source media="(min-width: 800px)" srcset="/images/elva-800w.jpg">
-							<img src="/images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+							<source media="(min-width: 800px)" srcset="images/elva-800w.jpg">
+							<img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
 						</picture>
 					</section>
 					<section id="Веселье-продолжается!">
