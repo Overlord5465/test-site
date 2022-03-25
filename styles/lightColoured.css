@@ -10,7 +10,7 @@ html ::selection {
   box-sizing: inherit;
   line-height: 1.6;
   letter-spacing: 1px;
-  cursor: url(/images/default.cur), default;
+  cursor: url(images/default.cur), default;
 }
 body {
   margin: 0%;
@@ -37,7 +37,7 @@ body {
   background-color: rgb(255, 255, 255);
 }
 a {
-  cursor: url(/images/pointer.cur), pointer;
+  cursor: url(images/pointer.cur), pointer;
 }
 /* Середина */
 article {
@@ -120,7 +120,7 @@ h2:hover {
 }
 #Списки ul li{
   padding-left: 2rem;
-  background-image: url(/images/lego.png);
+  background-image: url(images/lego.png);
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
