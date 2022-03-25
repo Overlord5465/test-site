@@ -10,7 +10,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 		<title>test-site №2</title>
 	</head>
-
+	
 	<body>
 		<header id="nav-header">
 			<button>Change name</button>
@@ -23,203 +23,22 @@
 				<article>
 					<h1 id="Приветствиe">(Оглавление)</h1> 
 					<p>(Текст)</p>
-					<section id="Подстрочный-и-надстрочный-индекс">
-						<h2>(Пункт №1) Подстрочный и надстрочный индекс</h2>
-						<p>(Текст)Я просыпаюсь в 6<sup>01</sup> часов утра.</p>
-						<p>Химическая формула кофеина: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-						<p>Если x<sup>2</sup> равно 9, x должен равняться 3 или -3.</p>
-					
-						<h3>(Подпункт)  </h3>
-						<p>(Текст) </p>
-					
-						<h3>(Подпункт)  </h3>
-						<p>(Текст) </p>
-					
-						<h3>(Подпункт)  </h3>
-						<p>(Текст)</p>
-					
-						<h3>(Подпункт)</h3>
-						<p>(Текст) </p>
-						<hr />
-					</section>
-					<section id="Третий-тип-списка">
-						<h2>(Пункт №2) Третий тип списка - описание</h2>
-						<p>(Текст)</p>
-						<dl>
-							<dt>Солилоквий</dt>
-							<dd>Драматическая речь, в которой персонаж разговаривает сам с собой, передавая свои ощущения и мысли публике (но не другим персонажам).</dd>
-							<dt>Монолог</dt>
-							<dd>Драматическая речь, в которой персонаж передаёт свои мысли публике и некоторым персонажам.</dd>
-							<dt>Ремарка</dt>
-							<dd>В драме: речь персонажа, при которой делается замечание с юмористическим или драматическим эффектом; чаще всего это чувства, мысли или предпосылки к чему-либо.</dd>
-						</dl>
-						
-						<h3>(Подпункт)</h3>
-						<p>(Текст)</p>
-						
-						<h3>(Подпункт)</h3>
-						<p>(Текст)</p>
-						<hr />
-					</section>
-					<section id="Аббревиатура">
-						<h2>(Пункт №3) Аббревиатура</h2>
-						<p>(Текст)</p>
-						<p>Мы используем <abbr title="Hypertext Markup Language">HTML</abbr> для структурирования наших веб-документов.</p>
-						<p>Я думаю, <abbr title="Почтенный">Почт.</abbr> Грин сделал это на кухне с бензопилой.</p>
-						
-						<h3>(Подпункт) </h3>
-						<p>(Текст)</p>
-						<ol>
-							<li>one</li>
-							<li>two</li>
-							<li>three</li>
-						</ol>
-						
-						<h3>(Подпункт) </h3>
-						<p>(Текст)</p>
-						<ul>
-							<li>one</li>
-							<li>two</li>
-							<li>three</li>
-						</ul>
-						<hr />
-					</section>
-					<section id="Представление-компьютерного-кода">
-						<h2>(Пункт №4) Представление компьютерного кода</h2>
-						<p>(Текст)</p>
-						<pre><code>var para = document.querySelector('p');
-					
-							para.onclick = function() {
-							alert('Owww, stop poking me!');
-							}</code>
-						</pre>	
-						<pre>
-							$ <kbd>ping mozilla.org</kbd>
-							<samp>PING mozilla.org (63.245.215.20): 56 data bytes
-							64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 t ime=158.233 ms</samp>
-						</pre>
-						
-						<h3 style="background-color:#CC99FF">(Подпункт)</h3>
-						<p>(Текст)</p>
-						<ul>
-							<li>Белый: #ffffff</li>
-							<li>Черный: #000000 </li>
-							<li>Красный: #ff0000</li>
-							<li>Синий: #0000ff</li>
-							<li>Зеленый: #00ff00</li>
-							<li>Желтый: #ffff00</li>
-						</ul>
-						
-						<h3>(Подпункт) </h3>
-						<p>(Текст)</p>
-							
-						<h4>(Пункт подпункта)</h4>
-						<p class="cold"></p>
-							
-						<h4>(Пункт подпункта)</h4>
-							
-						<h4>(Пункт подпункта)</h4>
-						<p></p>
-						<p></p>
-						<hr />
-					</section>
-					<section id="Представление-времени-и-даты">
-						<h2>(Пункт №5) Представление времени и даты</h2>
-					
-						<dl>
-							<dt>Стандартная дата</dt>
-							<dd>&lt;time datetime ="2020-01-20">20 Января 2020&lt;/time> </dd>
-							<dt>Только год и месяц</dt>
-							<dd>&lt;time datetime ="2020-01">Январь 2020&lt;/time> </dd>
-							<dt>Только месяц и день</dt>
-							<dd>&lt;time datetime ="01-20">20 Января&lt;/time> </dd>
-							<dt>Только время, часы и минуты</dt>
-							<dd>&lt;time datetime ="19:30">19:30&lt;/time> </dd>
-							<dt>Также вы можете отобразить секунды и миллисекунды!</dt>
-							<dd>&lt;time datetime ="19:30:01.856">19:30:01.856&lt;/time> </dd>
-							<dt>Дата и время</dt>
-							<dd>&lt;time datetime ="2020-01-20T19:30">7.30pm, 20 Января 2020&lt;/time> </dd>
-							<dt>Дата и время со смещением по часовому поясу</dt>
-							<dd>&lt;time datetime ="2020-01-20T19:30+01:00">7.30pm, 20 Января 2020, — это 8.30pm во Франции.&lt;/time> </dd>
-							<dt>Вызов номера недели</dt>
-							<dd>&lt;time datetime ="2020-W04">Четвёртая неделя 2020&lt;/time> </dd>
-						</dl>
-					
-						<h3>(Подпункт)</h3>
-						<p>(Текст)</p>
-					
-						<h3>(Подпункт)</h3>
-						<p>	</p> 
-						<hr />
-					</section>
-					<section  id="video-audio-iframe">
-						<h2>(Пункт №6) Video, audio and iframe</h2>
-						<h3>Video</h3>
-						<video controls width="400" height="400" 
-						poster="images/poster.png">
-							<source src="videos/rabbit.mp4" type="video/mp4">
-							<source src="videos/rabbit.webm" type="video/webm">
-							<track kind="subtitles" src="videos/subtitles/rabbit.vtt" srclang="en">
-							<p>Ваш браузер не поддерживает HTML5 видео. Вот <a href="videos/rabbit.mp4">ссылка на видео</a> взамен.</p>
-						</video>
-						<h3>Audio</h3>
-						<audio controls>
-							<source src="audios/viper.mp3" type="audio/mp3">
-							<source src="audios/viper.ogg" type="audio/ogg">
-							<p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
-						</audio>
-						<h3>Iframe</h3>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/YNY_pb4b22k?" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</section>
-					<section id="vector-graphics">
-						<h2>(Пункт №7) Vector graphics</h2>
-						<p>(Текст)</p>
-						<svg version="1.1" baseProfile="full" width="300" height="200"
-							xmlns="http://www.w3.org/2000/svg">
-							<rect width="100%" height="100%" fill="black" />
-							<circle cx="150" cy="100" r="90" fill="blue" />
-						</svg>
-					</section>
-					<section id="responsive-images">
-						<h2>(Пункт №8) Responsive images</h2>
-						<p>Для маленьких экранов маленькие изображения, а для больших большие.</p>
-						<img srcset="images/elva-fairy-320w.jpg 320w,
-												images/elva-fairy-480w.jpg 480w,
-												images/elva-fairy-800w.jpg 800w"
-									sizes="(max-width: 320px) 280px,
-													(max-width: 480px) 440px,
-													800px"
-									src="images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
-						<p>А тут фиг пойми что. Вроде с качеством как то связано, но не уверен :)</p>
-						<img srcset="images/elva-fairy-320w.jpg,
-												images/elva-fairy-480w.jpg 1.5x,
-												images/elva-fairy-640w.jpg 2x"
-								src="images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
-						<p>Когда на компе то обычная картинка, а коли на телефоне зайдём, то другую картинку подкинем (обрезаную чтобы к примеру людишек по центру хорошо было видно)</p>
-						<picture>
-							<source media="(max-width: 799px) srcset="elva-480w-close-portrait.jpg">
-							<source media="(min-width: 800px)" srcset="images/elva-800w.jpg">
-							<img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
-						</picture>
-					</section>
-					<section id="Веселье-продолжается!">
-						<h2><a href="index.html">(Пункт №9)На главную страницу!</a></h2>
-					</section>
+					<h2 id="Вернуться на главную страницу"><a href="index.html">Вернуться на главную страницу</a></h1>
 				</article>
 			</main>
 			<div id="right-side">		
-				<aside class='sticky'>
+				<aside class="sticky">
 					<header>IN THIS ARTICLE</header>
 					<ol>
-						<li><a href="#Подстрочный-и-надстрочный-индекс">Подстрочный и надстрочный индекс</a></li>
-						<li><a href="#Третий-тип-списка">Третий тип списка - описание</a></li>
-						<li><a href="#Аббревиатура">Аббревиатура</a></li>
-						<li><a href="#Представление-компьютерного-кода">Представление компьютерного кода</a></li>
-						<li><a href="#Представление-времени-и-даты">Представление времени и даты</a></li>
-						<li><a href="#video-audio-iframe">Video, audio and iframe</a></li>
-						<li><a href="#vector-graphics">Vector graphics</a></li>
-						<li><a href="#responsive-images">Responsive images</a></li>
-						<li><a href="#Веселье-продолжается!">Вернуться на главную страницу!</a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#Вернуться на главную страницу">Вернуться на главную страницу!</a></li>
 					</ol>
 				</aside>	
 			</div>
