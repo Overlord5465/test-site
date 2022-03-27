@@ -21,18 +21,21 @@ body {
 #nav-footer {
   display: flex;
   height: 50px;
-  background-color: rgb(110, 142, 196);
+  background-color: rgba(110, 142, 196, 0.6);
   font-size: 1.5rem;
   margin: 0rem;
-}
-#nav-footer{
+  align-content: center;
 }
 #nav-header{
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+}
+footer > *{
+  margin: 0px;
 }
 #location{
-  border-bottom: 1px solid rgb(0, 255, 13);
+  border-bottom: 2px solid rgb(165, 1, 1);
 }
 #nav-header > p {
   height: 35px;
@@ -46,6 +49,7 @@ body {
   gap: 3rem;
   grid-template-areas: "sidebar main toc";
   margin: 40px;
+  margin-top: 80px;
   background-color: rgb(255, 255, 255);
 }
 a {
@@ -58,7 +62,8 @@ a {
 .white {
   font-size: 1.25rem;
   background-color: rgb(255, 255, 255);
-  margin: 30px;
+  margin: 40px;
+  margin-top: 80px;
 }
 #foto{
   margin-left: 20px;
@@ -67,12 +72,6 @@ a {
   bottom: 5px;
   left: 10px;
   margin-right: 40px;
-}
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px;
-  grid-gap: 10px;
 }
 /* Левая часть */
 nav {
@@ -282,4 +281,45 @@ textarea {
   color: #666;
   text-align: right;
   letter-spacing: 1px;
+}
+/* Grid */
+.wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+.col {
+  background: rgb(255,150,150);
+}
+.span2 { grid-column: auto / span 2;}
+.span3 { grid-column: auto / span 3;}
+.span4 { grid-column: auto / span 4;}
+.span5 { grid-column: auto / span 5;}
+.span6 { grid-column: auto / span 6;}
+.span7 { grid-column: auto / span 7;}
+.span8 { grid-column: auto / span 8;}
+.span9 { grid-column: auto / span 9;}
+.span10 { grid-column: auto / span 10;}
+.span11 { grid-column: auto / span 11;}
+.span12 { grid-column: auto / span 12;}
+
+.content {
+  grid-column: 3 / 9;
+  grid-row: 3 / 5;
+}
+/* Multicol */
+.container {
+  column-width: 250px;
+  column-gap: 20px;
+}
+.card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 0 0 1em 0;
 }

@@ -13,14 +13,14 @@ function setUserName() {
     myName = 'incognito';
   }
   localStorage.setItem('name', myName);
-  myHeading.textContent = 'Привет ' + myName;
+  myHeading.textContent = 'Здравствуйте, ' + myName;
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent += " " + storedName;
+  myHeading.textContent = "Здравствуйте, " + storedName;
 }
 
 
