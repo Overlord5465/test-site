@@ -13,7 +13,6 @@ html ::selection {
   cursor: url(images/default.cur), default;
 }
 body {
-  margin: 0%;
   background: rgb(0,255,35);
   background: radial-gradient(circle, rgba(0,255,35,1) 0%, rgba(255,86,86,1) 33%, rgba(255,231,61,1) 67%, rgba(0,212,255,1) 100%);
 }
@@ -45,7 +44,6 @@ footer > *{
   font-size: 1.25rem;
   display: grid;
   grid-template-columns: minmax(0,0.5fr) minmax(0,3fr) minmax(0,15rem);
-  grid-gap: 3rem;
   gap: 3rem;
   grid-template-areas: "sidebar main toc";
   margin: 40px;
@@ -53,11 +51,9 @@ footer > *{
   background-color: rgb(255, 255, 255);
 }
 a {
-  cursor: url(images/pointer.cur), pointer;
-}
-.a {
   text-decoration: inherit;
   color: inherit;
+  cursor: url(images/pointer.cur), pointer;
 }
 .white {
   font-size: 1.25rem;
@@ -152,19 +148,18 @@ h2:hover {
                 0px -50px 65px #973716,
                 10px -70px 70px #451b0e;
 }
-#Списки ul {
+#lists ul {
   list-style-type: none;
   padding-left: 0;
 }
-#Списки ul li{
+#lists ul li{
   padding-left: 2rem;
-  background-image: url(images/lego.png);
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
 }
 /* Правая часть */
-aside {
+.side-panel {
   opacity: 0.8;
   margin-top: 100px;
   background-color: rgb(192, 192, 192);
@@ -173,16 +168,16 @@ aside {
   top: 50px;
   border-radius: 3%;
 }
-aside * {
+.side-panel * {
   list-style-type: none;
   padding-left: 0px;
   margin-left: 0px;
 }
-aside header{
+.side-panel header{
   text-align: center;
   color: black;
 }
-aside a {
+.side-panel a {
   text-decoration: inherit;
   color: inherit;
   display: inline-block;
@@ -193,11 +188,11 @@ aside a {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-aside a:hover, .a:hover {
+.side-panel a:hover, .a:hover {
   background-color: rgb(0, 93, 136);
   color: aqua;
 }
-aside a:active, .a:active {
+.side-panel a:active, .a:active {
   color: #ffffff;
 }
 /* Формы */

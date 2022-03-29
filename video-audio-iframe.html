@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Overlord5465">
+    <meta name="description" content="test-site">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/light-theme.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Video, audio and iframe</title>
+  </head>
+
+  <body>
+    <header id="nav-header">
+      <button>Change name</button>
+      <button>Change style</button>
+      <a href="index.html">Visiting card</a>
+      <p>></p>
+      <a href="training.html">Training</a>
+      <p>></p>
+      <a id="location" href="video-audio-iframe.html">Video, audio and iframe</a>
+    </header>
+
+    <div id="root" class="three-columns">
+			<div id="left-side">
+				<nav>
+					<header>TRAINING:</header>
+					<a href="lists.html">Lists</a><hr>
+					<a href="tables.html">Tables</a><hr>
+					<a href="images.html">Images</a><hr>
+					<a href="forms.html">Forms</a><hr>
+					<a id="position" href="video-audio-iframe.html">Video, audio and iframe</a><hr>
+					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
+					<a href="useful-things.html">Useful things</a>
+				</nav>
+			</div>
+      <main>
+        <h2>Video, audio and iframe</h2>
+        <section  id="video">
+          <h3>Video</h3>
+          <video controls width="400" height="400" 
+          poster="images/poster.png">
+            <source src="videos/rabbit.mp4" type="video/mp4">
+            <source src="videos/rabbit.webm" type="video/webm">
+            <track kind="subtitles" src="videos/subtitles/rabbit.vtt" srclang="en">
+            <p>Ваш браузер не поддерживает HTML5 видео. Вот <a href="videos/rabbit.mp4">ссылка на видео</a> взамен.</p>
+          </video>
+        </section>
+        <section id="audio">
+          <h3>Audio</h3>
+          <audio controls>
+            <source src="audios/viper.mp3" type="audio/mp3">
+            <source src="audios/viper.ogg" type="audio/ogg">
+            <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+          </audio>
+        </section>
+        <section id="iframe">
+          <h3>Iframe</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YNY_pb4b22k?" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+      </main>
+      <div id="right-side">
+				<aside>
+					<header>IN THIS ARTICLE</header>
+					<a href="#video">Video</a><hr>
+					<a href="#audio">Audio</a><hr>
+					<a href="#iframe">Iframe</a>		
+				</aside>
+			</div>
+    </div>
+
+    <footer id="nav-footer">
+      <p<a href="">© Overlord5465</a></p>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+
+</html>

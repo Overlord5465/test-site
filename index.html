@@ -1,51 +1,50 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Overlord5465">
+    <meta name="description" content="test-site">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/light-theme.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Visiting card</title>
+  </head>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="Overlord5465">
-		<meta name="description" content="test-site">
-		<link rel="stylesheet" href="styles/lightColoured.css">
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-		<title>test-site</title>
-	</head>
-
-	<body>
-		<header id="nav-header">
-			<button>Change name</button>
-			<button>Change style</button>
-      <p id="location"><a class="a" href="index.html">Visiting card</a></p>
-		</header>
+  <body>
+    <header id="nav-header">
+      <button>Change name</button>
+      <button>Change style</button>
+      <a id="location" href="index.html">Visiting card</a>
+    </header>
 
     </div>
-		<div class="white">
-			<main id="center">
-				<article>
-          <h1 id="Приветствие">Здравствуйте</h1>
-          <h2>Рад представить вам свои данные</h2>
-          <img id="foto"src="images/tanaka.jpg" alt="Моё фото"> 
-          <p>Фамилия: Муртузаев</p>
-					<p>Имя: Магомед</p>
-					<p>Отчество: Исламович</p>
-          <p>Номер телефона: +79226731190</p>
-          <p>Образование: 11 классов</p>
-					<p>Опыт работы: нету</p>
-					<p>Языки: русский, английский(beginner)</p>
-					<p class="box6">Что знаю: html(beginner), css(beginner), javaScript(0) </p>
-          <p>Мой черновик для тренеровки: <a href="training.html">Training</a></p>
-          <p>Адрес эл.почты: overlord5465@mail.ru</p>
-          <p>VK: <a href="https://vk.com/id265751019">https://vk.com/id265751019</a></p>
-          <p>Адрес проживания: г.Курган, ул.Куйбышева 80, кв.145</p>
-					<p>...</p>
-        </article>
-			</main>
-		</div>
-		<footer id="nav-footer">
-			<p<a href="">© Overlord5465</a></p>
-		</footer>
-		<script src="scripts/main.js"></script>
-	</body>
+    <div id="root">
+      <main id="main-rounded">
+        <h1 id="salutation"></h1>
+        <h2>I'm glad to present you my data</h2>
+        <img class="float" src="images/tanaka.jpg" alt="My portrait">
+        <ul class="regular-list">
+          <li>Surname: Murtuzaev.</li>
+          <li>Name: Magomed.</li>
+          <li>Patronymic: Islamovich.</li>
+          <li>Education: 11 classes.</li>
+          <li>Work experience: no.</li>
+          <li>Languages: Russian, English(beginner).</li>
+          <li>What do I know: html(beginner), css(beginner), javaScript(0).</li>
+          <li>My <a href="training.html">training</a>.</li>
+          <li>My phone number: +79226731190.</li>
+          <li>E-mail adress: overlord5465@mail.ru.</li>
+          <li>VK: <a href="https://vk.com/id265751019">https://vk.com/id265751019</a>.</li>
+        </ul>
+      </main>
+    </div>
+
+    <footer id="nav-footer">
+      <p<a href="">© Overlord5465</a></p>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
 
 </html>

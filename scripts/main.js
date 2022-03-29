@@ -1,5 +1,5 @@
 // Кнопка смены имени и появление окна для ввода имени
-let myHeading = document.querySelector('h1');
+let myHeading = document.querySelector('#salutation');
 let myButton = document.querySelector('button');
 
 myButton.onclick = function() {
@@ -13,14 +13,14 @@ function setUserName() {
     myName = 'incognito';
   }
   localStorage.setItem('name', myName);
-  myHeading.textContent = 'Здравствуйте, ' + myName;
+  myHeading.textContent = 'Hello, ' + myName + '!';
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = "Здравствуйте, " + storedName;
+  myHeading.textContent = "Hello, " + storedName + '!';
 }
 
 
