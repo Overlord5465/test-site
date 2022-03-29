@@ -1,4 +1,24 @@
-// Кнопка смены имени и появление окна для ввода имени
+
+// theme
+let myButton2 = document.querySelectorAll('button')[1];
+let theme = document.getElementsByTagName('link')[1];
+let x = 0;
+
+myButton2.onclick = function() {
+  changedStyle();
+}
+
+function changedStyle(){
+  if(x === 0){
+    theme.setAttribute('href', 'css/dark-theme.css')
+    ++x;
+  }else{
+    theme.setAttribute('href', 'css/light-theme.css')
+    --x;
+  }
+}
+
+// salutation
 let myHeading = document.querySelector('#salutation');
 let myButton = document.querySelector('button');
 
@@ -23,34 +43,14 @@ if(!localStorage.getItem('name')) {
   myHeading.textContent = "Hello, " + storedName + '!';
 }
 
+// // img1 and img2
+// const myImage = document.querySelector('img');
 
-// Кнопка для смены стиля сайта
-let myButton2 = document.querySelectorAll('button')[1];
-let style = document.getElementsByTagName('link')[0];
-let x = 0;
-
-myButton2.onclick = function() {
-  changedStyle();
-}
-
-function changedStyle(){
-  if(x === 0){
-    style.setAttribute('href', 'styles/darkColoured.css')
-    ++x;
-  }else{
-    style.setAttribute('href', 'styles/lightColoured.css')
-    --x;
-  }
-}
-
-// Меняет одну картинку на другую
-const myImage = document.querySelector('img');
-
-myImage.onclick = function() {
-    const mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/1.jpg') {
-      myImage.setAttribute ('src','images/2.jpg');
-    } else {
-      myImage.setAttribute ('src','images/1.jpg');
-    }
-}
+// myImage.onclick = function() {
+//     const mySrc = myImage.getAttribute('src');
+//     if(mySrc === 'images/1.jpg') {
+//       myImage.setAttribute ('src','images/2.jpg');
+//     } else {
+//       myImage.setAttribute ('src','images/1.jpg');
+//     }
+// }
