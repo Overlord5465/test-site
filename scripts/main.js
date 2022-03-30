@@ -1,20 +1,17 @@
 
 // theme
 let myButton2 = document.querySelectorAll('button')[1];
-let theme = document.getElementsByTagName('link')[1];
-let x = 0;
-
 myButton2.onclick = function() {
-  changedStyle();
+  changeTheme();
 }
 
-function changedStyle(){
-  if(x === 0){
+function changeTheme(){
+  if(parseInt(localStorage.getItem('topicCounter')) === 0){
     theme.setAttribute('href', 'css/dark-theme.css')
-    ++x;
+    localStorage.setItem('topicCounter', 1)
   }else{
     theme.setAttribute('href', 'css/light-theme.css')
-    --x;
+    localStorage.setItem('topicCounter', 0)
   }
 }
 
