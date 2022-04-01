@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Overlord5465">
+    <meta name="description" content="test-site">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/light-theme.css">
+    <link rel="stylesheet" href="css/javascript.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>JavaScript</title>
+    <script src="scripts/default-theme.js"></script>
+  </head>
+
+  <body>
+    <header id="nav-header">
+      <button>Change name</button>
+      <button>Change style</button>
+      <a href="index.html">Visiting card</a>
+      <p>></p>
+      <a href="training.html">Training</a>
+      <p>></p>
+      <a id="location" href="javascript.html">JavaScript</a>
+    </header>
+
+    <div id="root" class="three-columns">
+			<div id="left-side">
+				<nav>
+					<header>TRAINING:</header>
+					<a href="lists.html">Lists</a><hr>
+					<a href="tables.html">Tables</a><hr>
+					<a href="images.html">Images</a><hr>
+					<a href="forms.html">Forms</a><hr>
+					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
+					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
+					<a href="useful-things.html">Useful things</a>
+          <a  id="position" href="javascript.html">JavaScript</a>
+				</nav>
+			</div>
+      <main>
+        <h1>JavaScript</h1>
+        <section id="parent">
+          <h2>Сreating and deleting elements with a button</h2>
+          <p id="click-me" class="button">Click me!</p>
+          <p id="clean-out" class="button">Сlean out</p>
+        </section>
+        <hr>
+        <section id="number-guessing-game">
+          <h2>Number guessing game</h2>
+          <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+          <div class="form">
+            <label for="guessField">Enter a guess: </label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" value="Submit guess" class="guessSubmit">
+          </div>
+          <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+          </div>
+        </section>
+        <hr>
+        <section id="give-advice">
+          <h2>give advice when choosing an option</h2>
+          <label for="weather">Select the weather type today: </label>
+          <select id="weather">
+            <option value="">--Make a choice--</option>
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowing">Snowing</option>
+            <option value="overcast">Overcast</option>
+          </select>
+          <p id="advice"></p>
+        </section>
+        <hr>
+        <section id="???">
+          <h2>???</h2>
+          
+        </section>
+        <hr>
+      </main>
+      <div id="right-side">
+				<aside>
+					<header>IN THIS ARTICLE</header>
+          <a href="#parent">Button</a>
+          <a href="#number-guessing-game">Number guessing</a>	
+          <a href="#give-advice">Give advice</a>
+          <a href="#???">???</a>
+				</aside>
+			</div>
+    </div>
+
+    <footer id="nav-footer">
+      <p<a href="">© Overlord5465</a></p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/javascript.js"></script>
+  </body>
+
+</html>

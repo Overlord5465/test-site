@@ -77,13 +77,13 @@ h2:hover {
                 0px 4px 1px rgba(0,0,0,0.5),
                 4px 4px 5px rgba(0,0,0,0.7),
                 0px 0px 7px rgba(0,0,0,0.4),
-                0px 0px 20px #fefcc9,
-                10px -10px 30px #feec85,
-                -20px -20px 40px #ffae34,
-                20px -30px 35px #ec760c,
-                -20px -40px 40px #cd4606,
-                0px -50px 65px #973716,
-                10px -70px 70px #451b0e;
+                0px 0px 20px #c9fcfe,
+                10px -10px 30px #85e2fe,
+                -20px -20px 40px #34a4ff,
+                20px -30px 35px #0c5aec,
+                -20px -40px 40px #0906cd,
+                0px -50px 65px #181697,
+                10px -70px 70px #0f0e45;
 }
 h3 {
   text-align: center;
