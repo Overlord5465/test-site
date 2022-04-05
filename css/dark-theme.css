@@ -28,6 +28,9 @@ main *,
 aside * {
   font-size: 1.3rem;
 }
+canvas {
+  border: 3px solid #ffffff;
+}
 h1 {
   text-align: center;
   font-size: 3rem;
