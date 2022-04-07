@@ -12,8 +12,8 @@
 // }
 
 // -------------------Buttons-----------------------
-const clickMy = document.getElementById("click-me");
-const parent = document.getElementById("parent");
+const clickMy = document.querySelector("#click-me");
+const parent = document.querySelector("#parent");
 clickMy.addEventListener('click', createParagraph);
 
 function createParagraph() {
@@ -22,7 +22,7 @@ function createParagraph() {
   para.textContent = 'You clicked the button "CLICK ME!"';
 }
 
-const cleanOut = document.getElementById("clean-out");
+const cleanOut = document.querySelector("#clean-out");
 cleanOut.addEventListener('click', cleanParagraph);
 
 function cleanParagraph() {
@@ -43,7 +43,7 @@ let guessSubmit = document.querySelector('.guessSubmit');
 let guessField = document.querySelector('.guessField');
 
 let guessCount = 1;
-const numberGuessingGame = document.getElementById('number-guessing-game');
+const numberGuessingGame = document.querySelector('#number-guessing-game');
 let resetButton;
 
 function checkGuess() {
@@ -108,8 +108,8 @@ function resetGame() {
 }
 
 // --------------------Type weather---------------------
-const select = document.getElementById('weather');
-const para = document.getElementById('advice');
+const select = document.querySelector('#weather');
+const para = document.querySelector('#advice');
 
 select.addEventListener('change', setWeather);
 
@@ -129,3 +129,264 @@ function setWeather() {
   }
 }
 
+// --------------------------Verse---------------------------
+let verseChoose = document.querySelector('#verse-choose');
+let poemDisplay = document.querySelector('pre');
+
+verseChoose.onchange = function() {
+  let verse = verseChoose.value;
+  updateDisplay(verse);
+};
+
+function updateDisplay(verse) {
+  verse = verse.replace(" ", "");
+  verse = verse.toLowerCase();
+  let url ='txt/' + verse + '.txt';
+  // let request = new XMLHttpRequest();
+  // request.open('GET', url);
+  // request.responseType = 'text';
+  // request.onload = function() {
+  //   poemDisplay.textContent = request.response;
+  // };
+  // request.send();
+  // ВЕРХНИЙ КОММЕНТАРИЙ И НИЖНЯЯ ЧАСТЬ КОДА ДЕЛАЮТ ОДНУ И ТУ ЖЕ ВЕЩЬ
+  fetch(url).then(function(response) {
+    response.text().then(function(text) {
+      poemDisplay.textContent = text;
+    });
+  });
+};
+
+updateDisplay('Verse 1');
+verseChoose.value = 'Verse 1';
+
+// -------------------------Animation balls------------------------------
+// set up canvas
+
+const canvas0 = document.querySelector('#balls');
+const ctx0 = canvas0.getContext('2d');
+
+const width = canvas0.width = window.innerWidth/2 + 120;
+const height = canvas0.height = window.innerHeight;
+
+// function to generate random number
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// function to generate random RGB color value
+
+function randomRGB() {
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
+
+class Ball {
+
+   constructor(x, y, velX, velY, color, size) {
+      this.x = x;
+      this.y = y;
+      this.velX = velX;
+      this.velY = velY;
+      this.color = color;
+      this.size = size;
+   }
+
+   draw() {
+      ctx0.beginPath();
+      ctx0.fillStyle = this.color;
+      ctx0.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+      ctx0.fill();
+   }
+
+   update() {
+      if ((this.x + this.size) >= width) {
+         this.velX = -(this.velX);
+      }
+
+      if ((this.x - this.size) <= 0) {
+         this.velX = -(this.velX);
+      }
+
+      if ((this.y + this.size) >= height) {
+         this.velY = -(this.velY);
+      }
+
+      if ((this.y - this.size) <= 0) {
+         this.velY = -(this.velY);
+      }
+
+      this.x += this.velX;
+      this.y += this.velY;
+   }
+
+   collisionDetect() {
+      for (const ball of balls) {
+         if (!(this === ball)) {
+            const dx = this.x - ball.x;
+            const dy = this.y - ball.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < this.size + ball.size) {
+              ball.color = this.color = randomRGB();
+            }
+         }
+      }
+   }
+
+}
+
+const balls = [];
+
+while (balls.length < 25) {
+   const size = random(10,20);
+   const ball = new Ball(
+      // ball position always drawn at least one ball width
+      // away from the edge of the canvas, to avoid drawing errors
+      random(0 + size,width - size),
+      random(0 + size,height - size),
+      random(-7,7),
+      random(-7,7),
+      randomRGB(),
+      size
+   );
+
+  balls.push(ball);
+}
+
+function loop() {
+   ctx0.fillStyle = 'rgba(0, 0, 0, 0.25)';
+   ctx0.fillRect(0, 0,  width, height);
+
+   for (const ball of balls) {
+     ball.draw();
+     ball.update();
+     ball.collisionDetect();
+   }
+
+   requestAnimationFrame(loop);
+}
+
+loop();
+
+// --------------------Elementary examples----------------------------
+const canvas1 = document.querySelector('#myCanvas');
+const ctx1 = canvas1.getContext('2d');
+
+canvas1.width = width;
+canvas1.height = height;
+
+// Холст
+ctx1.fillStyle = 'rgb(0, 0, 0)';
+ctx1.fillRect(0, 0, width, height);
+
+// Перевод градусов в радианы
+function degToRad(degrees) {
+  return degrees * Math.PI / 180;
+};
+
+// Треугольник
+ctx1.fillStyle = 'rgb(255, 0, 0)';
+ctx1.beginPath();
+ctx1.moveTo(50, 50);
+ctx1.lineTo(150, 50);
+
+const triHeight = 50 * Math.tan(degToRad(60));
+ctx1.lineTo(100, 50 + triHeight);
+
+ctx1.lineTo(50, 50);
+ctx1.fill();
+
+// Круг
+ctx1.fillStyle = 'rgb(0, 0, 255)';
+ctx1.beginPath();
+ctx1.arc(150, 106, 50, degToRad(0), degToRad(360), false);
+ctx1.fill();
+
+// Пакмен круг
+ctx1.fillStyle = 'yellow';
+ctx1.beginPath();
+ctx1.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+ctx1.lineTo(200, 106);
+ctx1.fill();
+
+// Белый текст
+ctx1.strokeStyle = 'white';
+ctx1.lineWidth = 1;
+ctx1.font = '36px arial';
+ctx1.strokeText('Canvas text', 300, 50);
+
+// Красный текст
+ctx1.fillStyle = 'red';
+ctx1.font = '48px georgia';
+ctx1.fillText('Canvas text', 300, 150);
+
+// Lego people---Из-за треугольников что-то пошло не так!!!!!!!! ('-') плак плак
+const image0 = new Image();
+image0.src = 'images/legoPeople.png';
+
+image0.addEventListener('load', () => ctx1.drawImage(image0, 600, 10, 300, 300));
+
+// Фиолетовые треугольники
+ctx1.translate(width/2, height/2);
+
+let length = 250;
+let moveOffset = 20;
+
+for (let i = 0; i < length; i++) {
+  ctx1.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
+  ctx1.beginPath();
+  ctx1.moveTo(moveOffset,moveOffset);
+  ctx1.lineTo(moveOffset+length,moveOffset);
+  const triHeight = length/2 * Math.tan(degToRad(60));
+  ctx1.lineTo(moveOffset+(length/2),moveOffset+triHeight);
+  ctx1.lineTo(moveOffset,moveOffset);
+  ctx1.fill();
+
+  length--;
+  moveOffset += 0.7;
+  ctx1.rotate(degToRad(5));
+}
+
+//--------------------------Animation character-----------------------------
+const canvas2 = document.querySelector('#character');
+const ctx2 = canvas2.getContext('2d');
+let height0;
+canvas2.width = width;
+canvas2.height = height0 = 300;
+
+ctx2.fillStyle = 'rgb(0, 0, 0)';
+ctx2.fillRect(0, 0, width, height0);
+
+ctx2.translate(width/2, height0/2);
+
+const image = new Image();
+image.src = 'images/walk-right.png';
+image.onload = draw0;
+
+let sprite = 0;
+let posX = 0;
+
+function draw0() {
+  ctx2.fillRect(-(width/2), -(height0/2), width, height0);
+
+  ctx2.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+
+  if (posX % 13 === 0) {
+    if (sprite === 5) {
+      sprite = 0;
+    } else {
+      sprite++;
+    }
+  }
+
+  if(posX > width/2) {
+    let newStartPos = -((width/2) + 102);
+    posX = Math.ceil(newStartPos);
+    console.log(posX);
+  } else {
+    posX += 2;
+  }
+
+  window.requestAnimationFrame(draw0);
+};

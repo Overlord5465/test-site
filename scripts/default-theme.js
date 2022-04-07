@@ -1,4 +1,4 @@
-let theme = document.getElementsByTagName('link')[1];
+let theme = document.querySelectorAll('link')[1];
 
 if(!localStorage.getItem('topicCounter')) {
   localStorage.setItem('topicCounter', 0)

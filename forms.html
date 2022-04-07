@@ -33,7 +33,7 @@
 					<a id="position" href="forms.html">Forms</a><hr>
 					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
 					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
-					<a href="useful-things.html">Useful things</a>
+					<a href="useful-things.html">Useful things</a><hr>
           <a href="javascript.html">JavaScript</a>
 				</nav>
 			</div>
@@ -41,14 +41,20 @@
         <h2>Forms</h2>
         <section>
           <form>
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" placeholder="Введите ваше имя..." >
-            
-            <label for="email">Ваш email</label>
-            <input type="text" id="email" placeholder="Введите ваш email...">
-            
-            <label for="hi">Ваше сообщение</label>
-            <textarea id="hi" placeholder="Введите ваше сообщение..." disabled="disabled"></textarea>>
+            <ul class="regular-list">
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name..." >
+              </li>
+              <li>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" placeholder="Enter your email...">
+              </li>
+              <li>
+                <label for="hi">Message:</label>
+                <textarea id="hi" placeholder="Enter your message..." disabled="disabled"></textarea>
+              </li>
+            </ul>
           </form>
       </section>
       </main>

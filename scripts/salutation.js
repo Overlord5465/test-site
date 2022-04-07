@@ -19,5 +19,5 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = "Hello, " + storedName + '!';
+  myHeading.textContent = 'Hello, ' + storedName + '!';
 }

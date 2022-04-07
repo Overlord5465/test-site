@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>JavaScript</title>
+    <script src="scripts/three.min.js" defer></script>
+    <script src="scripts/cube.js" defer></script>
     <script src="scripts/default-theme.js"></script>
   </head>
 
@@ -35,7 +37,7 @@
 					<a href="forms.html">Forms</a><hr>
 					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
 					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
-					<a href="useful-things.html">Useful things</a>
+					<a href="useful-things.html">Useful things</a><hr>
           <a  id="position" href="javascript.html">JavaScript</a>
 				</nav>
 			</div>
@@ -75,9 +77,33 @@
           <p id="advice"></p>
         </section>
         <hr>
+        <section id="verse">
+          <h2>Verse</h2>
+          <form>
+            <label for="verse-choose">Choose a verse</label>
+            <select id="verse-choose" name="verse-choose">
+              <option>Verse 1</option>
+              <option>Verse 2</option>
+              <option>Verse 3</option>
+              <option>Verse 4</option>
+            </select>
+          </form>
+          <h3>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h3>
+          <pre></pre>
+        </section>
+        <hr>
         <section id="canvas">
           <h2>Canvas</h2>
-          <canvas></canvas>
+          <h3>Elementary examples</h3>
+          <canvas id="myCanvas"></canvas>
+          <h3>Animation balls</h3>
+          <canvas id="balls"></canvas>
+          <h3>Animation character</h3>
+          <canvas id="character"></canvas>
+        </section>
+        <hr>
+        <section id="WebGL">
+          <h2>WebGL</h2>
         </section>
         <hr>
       </main>
@@ -87,7 +113,9 @@
           <a href="#parent">Button</a>
           <a href="#number-guessing-game">Number guessing</a>	
           <a href="#give-advice">Give advice</a>
+          <a href="#verse">Verse</a>
           <a href="#canvas">Canvas</a>
+          <a href="#WebGL">WebGL</a>
 				</aside>
 			</div>
     </div>
@@ -97,7 +125,7 @@
     </footer>
     <script src="scripts/main.js"></script>
     <script src="scripts/javascript.js"></script>
-    <script src="scripts/balls.js"></script>
+
   </body>
 
 </html>
