@@ -186,6 +186,12 @@ aside *{
   padding-left: 0.5rem;
   margin: 2px;
 }
+#stylized * {
+  color:#000000;
+}
+#stylized h2 {
+  color:#ffffff;
+}
 #main-rounded{
   border-radius: 5%;
 }

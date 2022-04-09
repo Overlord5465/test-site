@@ -1,0 +1,117 @@
+/*-----------------------Default forms----------------------- */
+form {
+  width: 520px;
+  margin: 0 auto;
+  padding: 1em;
+}
+label {
+  text-align: right;
+  float: right;
+  clear: both;
+}
+input, 
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+input[type=checkbox], 
+input[type=radio] {
+  width: auto;
+  border: none;
+}
+input[type=file] {
+  border: none;
+  width: 350px; 
+}
+input:focus, 
+textarea:focus {
+  border-color: #000;
+}
+textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+fieldset {
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+.checkbox label {
+  width: auto;
+}
+.flex {
+  display: flex;
+}
+input:required {
+  border: 1px solid rgb(0, 0, 0);
+}
+input:optional {
+  border: 1px solid silver;
+}
+/*-----------------------Stylized forms----------------------- */
+#stylized form {
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  background-color: rgb(231, 231, 231);
+}
+#stylized input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+#stylized button {
+  float: right;
+  margin-left: 20px;
+}
+#stylized input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  background-color: white;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+#stylized input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.55em;
+  visibility: hidden;
+}
+#stylized input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+#stylized input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+#stylized input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+#stylized label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+  height: 30px;
+  width: 250px;
+}
+#stylized label[for="file"]:hover {
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+#stylized label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #ccc;
+}

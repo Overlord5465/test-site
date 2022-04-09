@@ -11,13 +11,13 @@ function setUserName() {
   if (myName === null || myName.length === 0){
     myName = 'incognito';
   }
-  localStorage.setItem('name', myName);
+  localStorage.setItem('user-name', myName);
   myHeading.textContent = 'Hello, ' + myName + '!';
 }
 
-if(!localStorage.getItem('name')) {
+if(!localStorage.getItem('user-name')) {
   setUserName();
 } else {
-  let storedName = localStorage.getItem('name');
+  let storedName = localStorage.getItem('user-name');
   myHeading.textContent = 'Hello, ' + storedName + '!';
 }
