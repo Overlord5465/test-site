@@ -46,52 +46,61 @@
               <legend>Title form</legend>
               <ul class="regular-list">
                 <li>
-                  <label>Name:
+                  <label>
+                    <p>Name:</p>
                     <input type="text" name="name" 
                     placeholder="Enter your name..." >
                   </label>
                 </li>
                 <li>
-                  <label>E-mail:
+                  <label>
+                    <p>E-mail:</p>
                     <input type="email" name="email" placeholder="Enter your email...">
                   </label>
                 </li>
                 <li>
-                  <label>Search:
+                  <label>
+                    <p>Search:</p>
                     <input type="search" name="search" placeholder="Enter what looking...">
                   </label>
                 </li>
                 <li>
-                  <label>Phone number:
+                  <label>
+                    <p>Phone number:</p>
                     <input type="tel" name="tel" 
                     placeholder="Enter your number...">
                   </label>
                 </li>
                 <li>
-                  <label>URL:
+                  <label>
+                    <p>URL:</p>
                     <input type="url" name="url" 
                     placeholder="Enter url...">
                   </label>
                 </li>
                 <li>
-                  <label>Password:
+                  <label>
+                    <p>Password:</p>
                     <input type="password" name="password" placeholder="Enter password...">
                   </label>
                 </li>
                 <li>
-                  <label>How old are you:
+                  <label>
+                    <p>How old are you:</p>
                     <input type="number" name="age" min="3" max="100"  placeholder="Enter your age...">
                   </label>
                 </li>
                 <li>
-                  <label>How many beans can you eat?
+                  <label>
+                    <p>How many beans can you eat?</p>
                     (<span class="bean-count"></span>)
                     <input type="range" name="beans" id="beans"
                     min="0" max="500" step="10">
                   </label>
                 </li>
                 <li>
-                  <label>What is your salary?
+                  <label>
+                    <p>What is your salary?</p>
                     (<span class="salary-count"></span>$)
                     <input type="range" name="salary" id="salary" min="0" max="10000" step="100" list="tickmarks0">
                     <datalist id="tickmarks0">
@@ -110,48 +119,57 @@
                   </label>
                 </li>
                 <li>
-                  <label>Pick a color:
+                  <label>
+                    <p>Pick a color:</p>
                     <input type="color" name="color">
                   </label>
                 </li>
                 <li>
-                  <label>Pick an image:
+                  <label>
+                    <p>Pick an image:</p>
                     <input type="file" name="file" accept="image/*">
                   </label>
                 </li>
                 <li>
-                  <label>Week and year:
+                  <label>
+                    <p>Week and year:</p>
                     <input type="week" name="week">
                   </label>
                 </li>
                 <li>
-                  <label>Month and year:
+                  <label>
+                    <p>Month and year:</p>
                     <input type="month" name="month">
                   </label>
                 </li>
                 <li>
-                  <label>Date:
+                  <label>
+                    <p>Date:</p>
                     <input type="date" name="expiration">
                   </label>
                 </li>
                 <li>
-                  <label>Time:
+                  <label>
+                    <p>Time:</p>
                     <input type="time" name="time">
                   </label>
                 </li>
                 <li>
-                  <label>Date and time:
+                  <label>
+                    <p>Date and time:</p>
                     <input type="datetime-local" name="datetime">
                   </label>
                 </li>
                 <li>
-                  <label>Message:
+                  <label>
+                    <p>Message:</p>
                     <textarea name="user_message"
                     placeholder="Enter your message..."></textarea>
                   </label>
                 </li>
                 <li>
-                  <label>What is your favorite fruit? (With fallback)
+                  <label>
+                    <p>What is your favorite fruit? (With fallback)</p>
                     <input type="text" name="fruit" list="fruitList0">
                     <datalist id="fruitList0">
                       <label for="suggestion0">or pick a fruit</label>
@@ -169,7 +187,8 @@
                   </label>
                 </li>
                 <li>
-                  <label>Pick a fruit:
+                  <label>
+                    <p>Pick a fruit:</p>
                     <select name="simple">
                       <option>Banana</option>
                       <option>Cherry</option>
@@ -178,7 +197,8 @@
                   </label>
                 </li>
                 <li>
-                  <label>Pick a fruit:
+                  <label>
+                    <p>Pick a fruit:</p>
                     <select name="groups">
                       <optgroup label="fruits">
                         <option>Banana</option>
@@ -194,7 +214,8 @@
                   </label>
                 </li>
                 <li>
-                  <label>Pick a fruit:
+                  <label>
+                    <p>Pick a fruit:</p>
                     <select multiple name="multi">
                       <option>Banana</option>
                       <option>Cherry</option>
@@ -205,25 +226,25 @@
                 <li class="checkbox">
                   <label>
                     <input type="checkbox" name="taste_cherry" value="1">
-                    I like cherry
+                    <p>I like cherry</p>
                   </label>
                 </li>
                 <li class="checkbox">
                   <label>
                     <input type="checkbox" name="taste_banana" value="2">
-                    I like banana
+                    <p>I like banana</p>
                   </label>  
                 </li>
                 <li class="checkbox">
                   <label>
                     <input type="radio" name="title" value="M." >
-                    Mister
+                    <p>Mister</p>
                   </label>
                 </li>
                 <li class="checkbox">
                   <label>
                     <input type="radio" name="title" value="Ms.">
-                    Miss
+                    <p>Miss</p>
                   </label>
                 </li>
                 <li>
@@ -250,54 +271,78 @@
               <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
               <ul class="regular-list">
                 <li>
-                  <label>Name:
+                  <label>
+                    <p>Name:</p>
                     <strong><abbr title="required">*</abbr></strong>
                     <input type="text" name="name" required
                     placeholder="Enter your name..." >
+                    <span></span>
                   </label>
                 </li>
                 <li>
-                  <label>E-mail:
+                  <label>
+                    <p>E-mail:</p>
                     <strong><abbr title="required">*</abbr></strong>
-                    <input type="email" name="email" required placeholder="Enter your email...">
+                    <input type="email" name="email" id="email" required placeholder="Enter your email...">
+                    <span></span>
                   </label>
                 </li>
                 <li>
-                  <label>Search:
+                  <label>
+                    <input type="checkbox" id="billing-checkbox" checked>
+                    <p>I am homeless</p>
+                  </label>
+                </li>
+                <li>
+                  <label id="billing" class="billing-label disabled-label">
+                    <p>Address:</p>
+                    <input id="address2" name="address2" type="text" disabled required>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <p>Search:</p>
                     <input type="search" name="search" placeholder="Enter what looking...">
                   </label>
                 </li>
                 <li>
-                  <label>Phone number:
+                  <label>
+                    <p>Phone number:</p>
                     <input type="tel" name="tel" 
                     placeholder="Enter your number...">
                   </label>
                 </li>
                 <li>
-                  <label>URL:
+                  <label>
+                    <p>URL:</p>
                     <input type="url" name="url" 
                     placeholder="Enter url...">
                   </label>
                 </li>
                 <li>
-                  <label>Password:
+                  <label>
+                    <p>Password:</p>
                     <input type="password" name="password" placeholder="Enter password...">
                   </label>
                 </li>
                 <li>
-                  <label>How old are you:
-                    <input type="number" name="age" min="3" max="100"  placeholder="Enter your age...">
+                  <label>
+                    <p>How old are you:</p>
+                    <input type="number" name="age" min="12" max="65" required placeholder="Enter your age...">
+                    <span></span>
                   </label>
                 </li>
                 <li>
-                  <label>How many beans can you eat?
+                  <label class="indent-left">
+                    <p>How many beans can you eat?</p>
                     (<span class="bean-count1"></span>)
                     <input type="range" name="beans" id="beans1"
                     min="0" max="500" step="10">
                   </label>
                 </li>
                 <li>
-                  <label>What is your salary?
+                  <label class="indent-left">
+                    <p>What is your salary?</p>
                     (<span class="salary-count1"></span>$)
                     <input type="range" name="salary" id="salary1" min="0" max="10000" step="100" list="tickmarks">
                     <datalist id="tickmarks">
@@ -316,48 +361,57 @@
                   </label>
                 </li>
                 <li>
-                  <label>Pick a color:
+                  <label>
+                    <p>Pick a color:</p>
                     <input type="color" name="color">
                   </label>
                 </li>
                 <li>
-                  <label for="file">Pick an image
+                  <p>Pick an image:</p>
+                  <label for="file">
                     <input type="file" name="file" id="file" accept="image/*">
                   </label>
                 </li>
                 <li>
-                  <label>Week and year:
+                  <label>
+                    <p>Week and year:</p>
                     <input type="week" name="week">
                   </label>
                 </li>
                 <li>
-                  <label>Month and year:
+                  <label>
+                    <p>Month and year:</p>
                     <input type="month" name="month">
                   </label>
                 </li>
                 <li>
-                  <label>Date:
+                  <label>
+                    <p>Date:</p>
                     <input type="date" name="expiration">
                   </label>
                 </li>
                 <li>
-                  <label>Time:
+                  <label>
+                    <p>Time:</p>
                     <input type="time" name="time">
                   </label>
                 </li>
                 <li>
-                  <label>Date and time:
+                  <label>
+                    <p>Date and time:</p>
                     <input type="datetime-local" name="datetime">
                   </label>
                 </li>
                 <li>
-                  <label>Message:
+                  <label>
+                    <p>Message:</p>
                     <textarea name="user_message"
                     placeholder="Enter your message..."></textarea>
                   </label>
                 </li>
                 <li>
-                  <label>What is your favorite fruit? (With fallback)
+                  <label class="indent-left">
+                    <p>What is your favorite fruit? (With fallback)</p>
                     <input type="text" name="fruit" list="fruitList">
                     <datalist id="fruitList">
                       <label for="suggestion">or pick a fruit</label>
@@ -374,17 +428,21 @@
                     </datalist>
                   </label>
                 </li>
-                <li>
-                  <label>Pick a fruit:
-                    <select name="simple">
-                      <option>Banana</option>
+                <li class="no-widget">
+                  <label>
+                    <p>Pick a fruit:</p>
+                    <select name="myFruit">
                       <option>Cherry</option>
                       <option>Lemon</option>
+                      <option>Banana</option>
+                      <option>Strawberry</option>
+                      <option>Apple</option>
                     </select>
                   </label>
                 </li>
                 <li>
-                  <label>Pick a fruit:
+                  <label>
+                    <p>Pick a fruit:</p>
                     <select name="groups">
                       <optgroup label="fruits">
                         <option>Banana</option>
@@ -400,7 +458,8 @@
                   </label>
                 </li>
                 <li>
-                  <label>Pick a fruit:
+                  <label>
+                    <p>Pick a fruit:</p>
                     <select multiple name="multi">
                       <option>Banana</option>
                       <option>Cherry</option>
@@ -411,26 +470,25 @@
                 <li class="checkbox">
                   <label>
                     <input type="checkbox" name="taste_cherry" value="1">
-                    I like cherry
+                    <p>I like cherry</p>
                   </label>
                 </li>
                 <li class="checkbox">
                   <label>
                     <input type="checkbox" id="taste_2" name="taste_banana" value="2">
-                    I like banana
+                    <p>I like banana</p>
                   </label>  
                 </li>
                 <li class="checkbox">
                   <label>
                     <strong><abbr title="required">*</abbr></strong>
                     <input type="radio" id="title_1" name="title" value="M." required>
-                    Mister
+                    <p>Mister</p>
                   </label>
-                </li>
-                <li class="checkbox">
                   <label>
-                    <input type="radio" id="title_2" name="title" value="Ms.">
-                    Miss
+                    <input type="radio" id="title_2" name="title" value="Ms." 
+                    required>
+                    <p>Miss</p>
                   </label>
                 </li>
                 <li>
@@ -443,8 +501,7 @@
                   <button type="submit">Send your message</button>
                   <button type="reset">Erase entered data</button>
                 </li>
-              </ul>
-              
+              </ul>   
             </fieldset>
           </form>
         </section>
@@ -452,7 +509,7 @@
       <div id="right-side">
 				<aside>
 					<header>IN THIS ARTICLE</header>
-          <a href="#default-forms">Default forms</a>	
+          <a href="#default-forms">Default forms</a><hr>	
           <a href="#stylized">Stylized forms</a>	
 				</aside>
 			</div>
@@ -462,7 +519,7 @@
       <a href="">© Overlord5465</a>
     </footer>
     <script src="scripts/main.js"></script>
-    <script src="scripts/beancount.js"></script>
+    <script src="scripts/forms.js"></script>
   </body>
 
 </html>

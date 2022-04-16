@@ -1,13 +1,14 @@
 /*-----------------------Default forms----------------------- */
 form {
-  width: 520px;
+  width: 530px;
   margin: 0 auto;
   padding: 1em;
 }
-label {
+form p {
+  display: inline;
+}
+form li {
   text-align: right;
-  float: right;
-  clear: both;
 }
 input, 
 textarea {
@@ -38,14 +39,12 @@ fieldset {
   box-sizing: border-box;
   border: 1px solid #999;
 }
-.checkbox label {
-  width: auto;
-}
 .flex {
   display: flex;
 }
-input:required {
-  border: 1px solid rgb(0, 0, 0);
+.indent-left{
+  display: block;
+  margin-right: 24px;
 }
 input:optional {
   border: 1px solid silver;
@@ -63,6 +62,9 @@ input:optional {
 #stylized button {
   float: right;
   margin-left: 20px;
+}
+#stylized label {
+  margin-bottom: 30px;
 }
 #stylized input[type="checkbox"] {
   -webkit-appearance: none;
@@ -94,24 +96,114 @@ input:optional {
   background: #ddd;
   color: gray;
 }
-#stylized input[type="file"] {
-  height: 0;
+#stylized li {
+  margin-bottom: 30px;
+}
+#stylized label :last-child {
+  margin-right: 24px;
+}
+#root #stylized label span,
+#root #stylized label abbr {
+  margin-right: 0;
+}
+#stylized p:not(label p) {
+  margin-right: 24px;
+}
+#stylized input + span {
+  position: relative;
+}
+#stylized input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  padding: 0px 10px;
+  top: -24px;
+  left: -70px;
+}
+#stylized input:invalid {
+  border: 2px solid red;
+}
+#stylized input:invalid + span::before {
+  content: '✖';
+  color: red;
+}
+#stylized input:valid + span::before {
+  content: '✓';
+  color: green;
+}
+#stylized input:valid:required:not(input[type="radio"]) {
+  border: 2px solid rgb(0, 189, 0);
+}
+#stylized input:out-of-range + span::after {
+  color: white;
+  background-color: red;
+  width: 190px;
+  content: "Outside allowable value range";
+  left: -192px;
+}
+#stylized input[type="text"]:disabled {
+  background: #eee;
+  border: 1px solid #ccc;
+}
+#stylized .disabled-label {
+color: #aaa;
+}
+#stylized input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+}
+#stylized input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: rgb(0, 255, 0);
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+#stylized input[type="radio"]:checked {
+  border: 2px solid rgb(0, 189, 0);
+}
+#stylized input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+#stylized input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate border-pulse;
+}
+@keyframes border-pulse {
+  from {
+    border: 2px solid red;
+  }
+
+  to {
+    border: 6px solid red;
+  }
+}
+/* Это стили для кастомных сообщений об ошибке */
+#stylized .error {
+  width  : 100%;
   padding: 0;
-  opacity: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
 }
-#stylized label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169, 169, 169);
-  border-radius: 5px;
-  text-align: center;
-  line-height: 1.5;
-  height: 30px;
-  width: 250px;
-}
-#stylized label[for="file"]:hover {
-  background: linear-gradient(to bottom, #fff, #ddd);
-}
-#stylized label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+
+#stylized .error.active {
+  padding: 0.3em;
 }

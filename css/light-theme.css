@@ -134,7 +134,7 @@ section {
 #position{
   background-color: rgb(219, 219, 219);
   border: 2px solid rgb(0, 155, 8);
-  border-radius: 10%;
+  border-radius: 15px;
   color:rgb(0, 13, 88);
 }
 a:not(main a) {
@@ -143,7 +143,7 @@ a:not(main a) {
 }
 a:not(main a):hover {
   background-color: rgba(219, 219, 219);
-  border-radius: 10%;
+  border-radius: 15px;
 }
 a:not(main a):active {
   color: #ffffff;
