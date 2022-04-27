@@ -30,9 +30,13 @@
 //   }
 // }
 
-let userScreen = screen.width;
 
-if (userScreen < 500) {
+
+
+
+let userScreen = window.screen.width;
+
+if (userScreen < 600) {
   let leftSide = document.querySelector("#left-side");
   leftSide.parentNode.removeChild(leftSide);
   let rightSide = document.querySelector("#right-side");

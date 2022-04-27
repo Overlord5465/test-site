@@ -1,15 +1,41 @@
 @import "_variables";
 @import "_mixins";
 
-html {
-  box-sizing: border-box;
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 0.5rem;
 
-  * {
-    box-sizing: inherit;
-    margin: 0;
-    font-size: 1.3rem;
-    line-height: 2;
-    letter-spacing: 1px;
+    * {
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 2;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  html {
+    font-size: 0.7rem;
+
+    * {
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 2;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+
+    * {
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 2;
+      letter-spacing: 1px;
+    }
   }
 }
 
@@ -119,7 +145,7 @@ button {
   background: rgba(0, 0, 200, 0.3);
   color: rgba(0, 0, 200, 0.6);
   box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
-  border-radius: 10px;
+  border-radius: 2rem;
   padding: 3px 10px;
   display: inline-block;
   cursor: pointer;
@@ -147,7 +173,7 @@ a:not(main a) {
 
   &:hover {
     background-color: rgba(219, 219, 219);
-    border-radius: 15px;
+    border-radius: 2rem;
   }
 
   &:active {
@@ -165,7 +191,7 @@ a:not(main a) {
 
 .three-columns {
   display: grid;
-  grid-template-columns: minmax(0, 16rem) minmax(0, 3fr) minmax(0, 16rem);
+  grid-template-columns: minmax(0, 12rem) minmax(0, 3fr) minmax(0, 12rem);
 }
 
 main {
@@ -216,7 +242,7 @@ aside {
   border: 1px solid black;
   color: rgb(8, 121, 250);
   opacity: 0.8;
-  border-radius: 15px;
+  border-radius: 2rem;
   position: sticky;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
@@ -237,7 +263,7 @@ aside {
 #nav-location {
   background-color: rgb(219, 219, 219);
   border: $borderLocation;
-  border-radius: 15px;
+  border-radius: 2rem;
   color: rgb(0, 13, 88);
 }
 
@@ -250,7 +276,7 @@ label p {
 }
 
 form {
-  width: 530px;
+  width: 30rem;
   margin: 0 auto;
   padding: 1em;
   border: 1px solid #CCC;
@@ -260,13 +286,13 @@ form {
   label,
   p:not(label p) {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
     float: right;
     clear: both;
   }
 
   p:not(label p) {
-    margin-right: 24px;
+    margin-right: 1.5rem;
   }
 
   .disabled-label p {
@@ -274,13 +300,13 @@ form {
   }
 
   .indent-left {
-    margin-right: 24px;
+    margin-right: 1.5rem;
   }
 
   label {
 
     & :last-child:not(input:required+span) {
-      margin-right: 24px;
+      margin-right: 1.5rem;
     }
 
     span,
@@ -292,14 +318,14 @@ form {
 
   button {
     float: right;
-    margin-left: 20px;
+    margin-left: 1rem;
   }
 }
 
 input:not([type=checkbox], [type=radio]),
 textarea {
   font: 1em sans-serif;
-  width: 250px;
+  width: 15rem;
   box-sizing: border-box;
   border: 1px solid #999;
 }
@@ -307,7 +333,7 @@ textarea {
 input {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
-  height: 30px;
+  height: 2.3rem;
 
   &[type="text"]:disabled {
     background: #eee;
@@ -330,8 +356,8 @@ input {
     background-color: black;
     border-radius: 8px;
     padding: 0px 10px;
-    top: -24px;
-    left: -70px;
+    top: -1.7rem;
+    left: -5rem;
   }
 
   &:invalid {
@@ -351,9 +377,9 @@ input {
   &:out-of-range+span::after {
     color: white;
     background-color: red;
-    width: 190px;
+    width: 12rem;
     content: "Outside allowable value range";
-    left: -192px;
+    left: -14rem;
   }
 
   &[type="checkbox"] {
@@ -374,7 +400,7 @@ input {
     content: "✔";
     position: absolute;
     font-size: 1.2em;
-    right: -1px;
+    right: -1.2px;
     top: -0.55em;
     visibility: hidden;
   }
@@ -389,19 +415,19 @@ input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-color: #fff;
 
   &::before {
     display: block;
     content: " ";
-    width: 10px;
-    height: 10px;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 6px;
     background-color: rgb(0, 255, 0);
     font-size: 1.2em;
-    transform: translate(3px, 3px) scale(0);
+    transform: translate(0.13rem, 0.13rem) scale(0);
     transform-origin: center;
     transition: all 0.3s ease-in;
   }
@@ -411,22 +437,22 @@ input[type="radio"] {
   }
 
   &:checked::before {
-    transform: translate(3px, 3px) scale(1);
+    transform: translate(0.13rem, 0.13rem) scale(1);
     transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
   }
 
   &:indeterminate {
-    border: 2px solid red;
+    border: 0.1rem solid red;
     animation: 0.4s linear infinite alternate border-pulse;
   }
 
   @keyframes border-pulse {
     from {
-      border: 2px solid red;
+      border: 0.1rem solid red;
     }
 
     to {
-      border: 6px solid red;
+      border: 0.3rem solid red;
     }
   }
 
@@ -458,7 +484,7 @@ input[type="radio"] {
 
   th,
   td {
-    padding: 20px;
+    padding: 0.7rem;
   }
 
   th {
@@ -476,6 +502,7 @@ input[type="radio"] {
     text-shadow: 1px 1px 1px black;
 
     th {
+      font-size: 1rem;
       font-family: 'Rock Salt', cursive;
     }
 
@@ -506,7 +533,7 @@ input[type="radio"] {
 
   caption {
     font-family: 'Rock Salt', cursive;
-    padding: 20px;
+    padding: 0.7rem;
     font-style: italic;
     caption-side: bottom;
     color: #666;
@@ -543,7 +570,7 @@ input[type="radio"] {
 
 /* Multicol */
 .container {
-  column-width: 250px;
+  column-width: 12rem;
   column-gap: 20px;
 }
 
@@ -558,18 +585,18 @@ input[type="radio"] {
 
 /* ------------------Tab-------------------- */
 #tab {
-  height: 800px;
+  height: 50rem;
 }
 
 .info-box {
-  width: 452px;
-  height: 400px;
+  width: 30rem;
+  height: auto;
   margin: 20px auto 0;
 
   ul {
     border: 1px solid #b60000;
     overflow: hidden;
-    height: 50px;
+    height: 3rem;
     margin: 0;
     padding: 0;
   }
@@ -577,14 +604,14 @@ input[type="radio"] {
   li {
     float: left;
     list-style-type: none;
-    width: 150px;
+    width: 9.9rem;
   }
 
   a {
     display: inline-block;
     text-decoration: none;
     width: 100%;
-    line-height: 50px;
+    line-height: 3rem;
     background: white;
     color: #b60000;
     text-align: center;
@@ -605,7 +632,7 @@ input[type="radio"] {
   .panels {
     clear: both;
     position: relative;
-    height: 596px;
+    height: auto;
   }
 
   article {
@@ -613,7 +640,7 @@ input[type="radio"] {
     color: white;
     position: absolute;
     padding: 10px 20px;
-    height: 596px;
+    height: 32rem;
     top: 0;
     left: 0;
   }
@@ -624,26 +651,26 @@ input[type="radio"] {
 }
 
 #zoom-img {
-  height: 750px;
+  height: 70rem;
 
   #lego {
     position: relative;
     z-index: 0;
-    width: 800px;
-    height: 500px;
+    width: 40rem;
+    height: 30rem;
   }
 
   @for $i from 0 to 6 {
     ##{"thumb"}#{$i} {
-      width: 100px;
+      width: 6.3rem;
     }
   }
 
   .zoom {
     position: relative;
-    bottom: 514px;
+    bottom: 30.97rem;
     z-index: 1;
-    width: 800px;
-    height: 500px;
+    width: 40rem;
+    height: 30rem;
   }
 }

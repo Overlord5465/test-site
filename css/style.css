@@ -1,17 +1,34 @@
 @charset "UTF-8";
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 0.5rem;
+  }
+  html * {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
 }
-html * {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  margin: 0;
-  font-size: 1.3rem;
-  line-height: 2;
-  letter-spacing: 1px;
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  html {
+    font-size: 0.7rem;
+  }
+  html * {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  html * {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+}
 body {
   background: radial-gradient(circle, #00ff23 0%, #ff5656 33%, #ffe73d 67%, #00d4ff 100%);
 }
@@ -87,7 +104,7 @@ button {
   color: rgba(0, 0, 200, 0.6);
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
           box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
-  border-radius: 10px;
+  border-radius: 2rem;
   padding: 3px 10px;
   display: inline-block;
   cursor: pointer;
@@ -115,7 +132,7 @@ a:not(main a) {
 }
 a:not(main a):hover {
   background-color: #dbdbdb;
-  border-radius: 15px;
+  border-radius: 2rem;
 }
 a:not(main a):active {
   color: white;
@@ -131,8 +148,8 @@ a:not(main a):active {
 .three-columns {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 16rem) minmax(0, 3fr) minmax(0, 16rem);
-  grid-template-columns: minmax(0, 16rem) minmax(0, 3fr) minmax(0, 16rem);
+  -ms-grid-columns: minmax(0, 12rem) minmax(0, 3fr) minmax(0, 12rem);
+  grid-template-columns: minmax(0, 12rem) minmax(0, 3fr) minmax(0, 12rem);
 }
 
 main {
@@ -189,7 +206,7 @@ aside {
   border: 1px solid black;
   color: #0879fa;
   opacity: 0.8;
-  border-radius: 15px;
+  border-radius: 2rem;
   position: sticky;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
@@ -210,7 +227,7 @@ aside * {
 #nav-location {
   background-color: #dbdbdb;
   border: 3px solid #009b08;
-  border-radius: 15px;
+  border-radius: 2rem;
   color: #000d58;
 }
 
@@ -223,7 +240,7 @@ label p {
 }
 
 form {
-  width: 530px;
+  width: 30rem;
   margin: 0 auto;
   padding: 1em;
   border: 1px solid #CCC;
@@ -233,21 +250,21 @@ form {
 form label,
 form p:not(label p) {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
   float: right;
   clear: both;
 }
 form p:not(label p) {
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 form .disabled-label p {
   color: #aaa;
 }
 form .indent-left {
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 form label :last-child:not(input:required + span) {
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 form label span,
 form label abbr {
@@ -255,13 +272,13 @@ form label abbr {
 }
 form button {
   float: right;
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
 input:not([type=checkbox], [type=radio]),
 textarea {
   font: 1em sans-serif;
-  width: 250px;
+  width: 15rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #999;
@@ -271,7 +288,7 @@ input {
   -webkit-box-shadow: inset 1px 1px 3px #ccc;
           box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
-  height: 30px;
+  height: 2.3rem;
 }
 input[type=text]:disabled {
   background: #eee;
@@ -291,8 +308,8 @@ input:required + span::after {
   background-color: black;
   border-radius: 8px;
   padding: 0px 10px;
-  top: -24px;
-  left: -70px;
+  top: -1.7rem;
+  left: -5rem;
 }
 input:invalid {
   border: 2px solid red;
@@ -308,9 +325,9 @@ input:valid + span::before {
 input:out-of-range + span::after {
   color: white;
   background-color: red;
-  width: 190px;
+  width: 12rem;
   content: "Outside allowable value range";
-  left: -192px;
+  left: -14rem;
 }
 input[type=checkbox] {
   -webkit-appearance: none;
@@ -330,7 +347,7 @@ input[type=checkbox]::before {
   content: "✔";
   position: absolute;
   font-size: 1.2em;
-  right: -1px;
+  right: -1.2px;
   top: -0.55em;
   visibility: hidden;
 }
@@ -344,20 +361,20 @@ input[type=radio] {
   -moz-appearance: none;
        appearance: none;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-color: #fff;
 }
 input[type=radio]::before {
   display: block;
   content: " ";
-  width: 10px;
-  height: 10px;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 6px;
   background-color: lime;
   font-size: 1.2em;
-  -webkit-transform: translate(3px, 3px) scale(0);
-          transform: translate(3px, 3px) scale(0);
+  -webkit-transform: translate(0.13rem, 0.13rem) scale(0);
+          transform: translate(0.13rem, 0.13rem) scale(0);
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transition: all 0.3s ease-in;
@@ -367,30 +384,30 @@ input[type=radio]:checked {
   border: 2px solid #00bd00;
 }
 input[type=radio]:checked::before {
-  -webkit-transform: translate(3px, 3px) scale(1);
-          transform: translate(3px, 3px) scale(1);
+  -webkit-transform: translate(0.13rem, 0.13rem) scale(1);
+          transform: translate(0.13rem, 0.13rem) scale(1);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
 input[type=radio]:indeterminate {
-  border: 2px solid red;
+  border: 0.1rem solid red;
   -webkit-animation: 0.4s linear infinite alternate border-pulse;
           animation: 0.4s linear infinite alternate border-pulse;
 }
 @-webkit-keyframes border-pulse {
   from {
-    border: 2px solid red;
+    border: 0.1rem solid red;
   }
   to {
-    border: 6px solid red;
+    border: 0.3rem solid red;
   }
 }
 @keyframes border-pulse {
   from {
-    border: 2px solid red;
+    border: 0.1rem solid red;
   }
   to {
-    border: 6px solid red;
+    border: 0.3rem solid red;
   }
 }
 
@@ -414,7 +431,7 @@ input[type=radio]:indeterminate {
 }
 #punk th,
 #punk td {
-  padding: 20px;
+  padding: 0.7rem;
 }
 #punk th {
   letter-spacing: 2px;
@@ -430,6 +447,7 @@ input[type=radio]:indeterminate {
 }
 #punk thead th,
 #punk tfoot th {
+  font-size: 1rem;
   font-family: "Rock Salt", cursive;
 }
 #punk thead th,
@@ -454,7 +472,7 @@ input[type=radio]:indeterminate {
 }
 #punk caption {
   font-family: "Rock Salt", cursive;
-  padding: 20px;
+  padding: 0.7rem;
   font-style: italic;
   caption-side: bottom;
   color: #666;
@@ -532,9 +550,9 @@ input[type=radio]:indeterminate {
 
 /* Multicol */
 .container {
-  -webkit-column-width: 250px;
-     -moz-column-width: 250px;
-          column-width: 250px;
+  -webkit-column-width: 12rem;
+     -moz-column-width: 12rem;
+          column-width: 12rem;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
@@ -553,31 +571,31 @@ input[type=radio]:indeterminate {
 
 /* ------------------Tab-------------------- */
 #tab {
-  height: 800px;
+  height: 50rem;
 }
 
 .info-box {
-  width: 452px;
-  height: 400px;
+  width: 30rem;
+  height: auto;
   margin: 20px auto 0;
 }
 .info-box ul {
   border: 1px solid #b60000;
   overflow: hidden;
-  height: 50px;
+  height: 3rem;
   margin: 0;
   padding: 0;
 }
 .info-box li {
   float: left;
   list-style-type: none;
-  width: 150px;
+  width: 9.9rem;
 }
 .info-box a {
   display: inline-block;
   text-decoration: none;
   width: 100%;
-  line-height: 50px;
+  line-height: 3rem;
   background: white;
   color: #b60000;
   text-align: center;
@@ -594,14 +612,14 @@ input[type=radio]:indeterminate {
 .info-box .panels {
   clear: both;
   position: relative;
-  height: 596px;
+  height: auto;
 }
 .info-box article {
   background-color: #b60000;
   color: white;
   position: absolute;
   padding: 10px 20px;
-  height: 596px;
+  height: 32rem;
   top: 0;
   left: 0;
 }
@@ -610,36 +628,36 @@ input[type=radio]:indeterminate {
 }
 
 #zoom-img {
-  height: 750px;
+  height: 70rem;
 }
 #zoom-img #lego {
   position: relative;
   z-index: 0;
-  width: 800px;
-  height: 500px;
+  width: 40rem;
+  height: 30rem;
 }
 #zoom-img #thumb0 {
-  width: 100px;
+  width: 6.3rem;
 }
 #zoom-img #thumb1 {
-  width: 100px;
+  width: 6.3rem;
 }
 #zoom-img #thumb2 {
-  width: 100px;
+  width: 6.3rem;
 }
 #zoom-img #thumb3 {
-  width: 100px;
+  width: 6.3rem;
 }
 #zoom-img #thumb4 {
-  width: 100px;
+  width: 6.3rem;
 }
 #zoom-img #thumb5 {
-  width: 100px;
+  width: 6.3rem;
 }
 #zoom-img .zoom {
   position: relative;
-  bottom: 514px;
+  bottom: 30.97rem;
   z-index: 1;
-  width: 800px;
-  height: 500px;
+  width: 40rem;
+  height: 30rem;
 }
