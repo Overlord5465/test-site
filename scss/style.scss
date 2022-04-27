@@ -471,7 +471,7 @@ input[type="radio"] {
 
   thead,
   tfoot {
-    background: url(/images/leopardskin.jpg);
+    background: url(../images/leopardskin.jpg);
     color: white;
     text-shadow: 1px 1px 1px black;
 
@@ -492,7 +492,7 @@ input[type="radio"] {
     }
 
     tr {
-      background-image: url(/images/noise.png);
+      background-image: url(../images/noise.png);
 
       &:nth-child(odd) {
         background-color: #ff33cc;
