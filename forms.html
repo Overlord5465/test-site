@@ -5,9 +5,7 @@
     <meta name="author" content="Overlord5465">
     <meta name="description" content="test-site">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/Normalize.css">
-    <link rel="stylesheet" href="css/light-theme.css">
-    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Forms</title>
@@ -20,7 +18,7 @@
       <p>></p>
       <a href="training.html">Training</a>
       <p>></p>
-      <a id="location" href="forms.html">Forms</a>
+      <a id="header-location" href="forms.html">Forms</a>
     </header>
 
     <div id="root" class="three-columns">
@@ -30,7 +28,7 @@
 					<a href="lists.html">Lists</a><hr>
 					<a href="tables.html">Tables</a><hr>
 					<a href="images.html">Images</a><hr>
-					<a id="position" href="forms.html">Forms</a><hr>
+					<a id="nav-location" href="forms.html">Forms</a><hr>
 					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
 					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
 					<a href="useful-things.html">Useful things</a><hr>
@@ -39,477 +37,194 @@
 			</div>
       <main>
         <h1>Forms</h1>
-        <section id="default-forms">
-          <h2>Default forms</h2>
-          <form action="/my-handling-form-page" method="post">
-            <fieldset>
-              <legend>Title form</legend>
-              <ul class="regular-list">
-                <li>
-                  <label>
-                    <p>Name:</p>
-                    <input type="text" name="name" 
-                    placeholder="Enter your name..." >
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>E-mail:</p>
-                    <input type="email" name="email" placeholder="Enter your email...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Search:</p>
-                    <input type="search" name="search" placeholder="Enter what looking...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Phone number:</p>
-                    <input type="tel" name="tel" 
-                    placeholder="Enter your number...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>URL:</p>
-                    <input type="url" name="url" 
-                    placeholder="Enter url...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Password:</p>
-                    <input type="password" name="password" placeholder="Enter password...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>How old are you:</p>
-                    <input type="number" name="age" min="3" max="100"  placeholder="Enter your age...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>How many beans can you eat?</p>
-                    (<span class="bean-count"></span>)
-                    <input type="range" name="beans" id="beans"
-                    min="0" max="500" step="10">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>What is your salary?</p>
-                    (<span class="salary-count"></span>$)
-                    <input type="range" name="salary" id="salary" min="0" max="10000" step="100" list="tickmarks0">
-                    <datalist id="tickmarks0">
-                      <option value="0"></option>
-                      <option value="1000"></option>
-                      <option value="2000"></option>
-                      <option value="3000"></option>
-                      <option value="4000"></option>
-                      <option value="5000"></option>
-                      <option value="6000"></option>
-                      <option value="7000"></option>
-                      <option value="8000"></option>
-                      <option value="9000"></option>
-                      <option value="10000"></option>
-                    </datalist>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a color:</p>
-                    <input type="color" name="color">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick an image:</p>
-                    <input type="file" name="file" accept="image/*">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Week and year:</p>
-                    <input type="week" name="week">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Month and year:</p>
-                    <input type="month" name="month">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Date:</p>
-                    <input type="date" name="expiration">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Time:</p>
-                    <input type="time" name="time">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Date and time:</p>
-                    <input type="datetime-local" name="datetime">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Message:</p>
-                    <textarea name="user_message"
-                    placeholder="Enter your message..."></textarea>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>What is your favorite fruit? (With fallback)</p>
-                    <input type="text" name="fruit" list="fruitList0">
-                    <datalist id="fruitList0">
-                      <label for="suggestion0">or pick a fruit</label>
-                      <select id="suggestion0" name="altFruit">
-                        <option>Apple</option>
-                        <option>Banana</option>
-                        <option>Blackberry</option>
-                        <option>Blueberry</option>
-                        <option>Lemon</option>
-                        <option>Lychee</option>
-                        <option>Peach</option>
-                        <option>Pear</option>
-                      </select>
-                    </datalist>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a fruit:</p>
-                    <select name="simple">
-                      <option>Banana</option>
-                      <option>Cherry</option>
-                      <option>Lemon</option>
-                    </select>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a fruit:</p>
-                    <select name="groups">
-                      <optgroup label="fruits">
-                        <option>Banana</option>
-                        <option selected>Cherry</option>
-                        <option>Lemon</option>
-                      </optgroup>
-                      <optgroup label="vegetables">
-                        <option>Carrot</option>
-                        <option>Eggplant</option>
-                        <option>Potato</option>
-                      </optgroup>
-                    </select>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a fruit:</p>
-                    <select multiple name="multi">
-                      <option>Banana</option>
-                      <option>Cherry</option>
-                      <option>Lemon</option>
-                    </select>
-                  </label>
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <input type="checkbox" name="taste_cherry" value="1">
-                    <p>I like cherry</p>
-                  </label>
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <input type="checkbox" name="taste_banana" value="2">
-                    <p>I like banana</p>
-                  </label>  
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <input type="radio" name="title" value="M." >
-                    <p>Mister</p>
-                  </label>
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <input type="radio" name="title" value="Ms.">
-                    <p>Miss</p>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <progress max="100" value="75">75/100</progress>
-                    <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
-                  </label>
-                </li>
-                <li>
-                  <label><button type="reset">Erase entered data</button>
-                  </label>
-                  <label><button type="submit">Send your message</button>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </form>
-        </section>
         <section id="stylized">
           <h2>Stylized forms</h2>
           <form action="/my-handling-form-page" method="post">
             <fieldset>
               <legend>Title form</legend>
               <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-              <ul class="regular-list">
-                <li>
-                  <label>
-                    <p>Name:</p>
-                    <strong><abbr title="required">*</abbr></strong>
-                    <input type="text" name="name" required
-                    placeholder="Enter your name..." >
-                    <span></span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>E-mail:</p>
-                    <strong><abbr title="required">*</abbr></strong>
-                    <input type="email" name="email" id="email" required placeholder="Enter your email...">
-                    <span></span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" id="billing-checkbox" checked>
-                    <p>I am homeless</p>
-                  </label>
-                </li>
-                <li>
-                  <label id="billing" class="billing-label disabled-label">
-                    Address:
-                    <input id="address2" name="address2" type="text" disabled required>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Search:</p>
-                    <input type="search" name="search" placeholder="Enter what looking...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Phone number:</p>
-                    <input type="tel" name="tel" 
-                    placeholder="Enter your number...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>URL:</p>
-                    <input type="url" name="url" 
-                    placeholder="Enter url...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Password:</p>
-                    <input type="password" name="password" placeholder="Enter password...">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>How old are you:</p>
-                    <input type="number" name="age" min="12" max="65" required placeholder="Enter your age...">
-                    <span></span>
-                  </label>
-                </li>
-                <li>
-                  <label class="indent-left">
-                    <p>How many beans can you eat?</p>
-                    (<span class="bean-count1"></span>)
-                    <input type="range" name="beans" id="beans1"
-                    min="0" max="500" step="10">
-                  </label>
-                </li>
-                <li>
-                  <label class="indent-left">
-                    <p>What is your salary?</p>
-                    (<span class="salary-count1"></span>$)
-                    <input type="range" name="salary" id="salary1" min="0" max="10000" step="100" list="tickmarks">
-                    <datalist id="tickmarks">
-                      <option value="0"></option>
-                      <option value="1000"></option>
-                      <option value="2000"></option>
-                      <option value="3000"></option>
-                      <option value="4000"></option>
-                      <option value="5000"></option>
-                      <option value="6000"></option>
-                      <option value="7000"></option>
-                      <option value="8000"></option>
-                      <option value="9000"></option>
-                      <option value="10000"></option>
-                    </datalist>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a color:</p>
-                    <input type="color" name="color">
-                  </label>
-                </li>
-                <li>
-                  <p>Pick an image:</p>
-                  <label for="file">
-                    <input type="file" name="file" id="file" accept="image/*">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Week and year:</p>
-                    <input type="week" name="week">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Month and year:</p>
-                    <input type="month" name="month">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Date:</p>
-                    <input type="date" name="expiration">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Time:</p>
-                    <input type="time" name="time">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Date and time:</p>
-                    <input type="datetime-local" name="datetime">
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Message:</p>
-                    <textarea name="user_message"
-                    placeholder="Enter your message..."></textarea>
-                  </label>
-                </li>
-                <li>
-                  <label class="indent-left">
-                    <p>What is your favorite fruit? (With fallback)</p>
-                    <input type="text" name="fruit" list="fruitList">
-                    <datalist id="fruitList">
-                      <label for="suggestion">or pick a fruit</label>
-                      <select id="suggestion" name="altFruit">
-                        <option>Apple</option>
-                        <option>Banana</option>
-                        <option>Blackberry</option>
-                        <option>Blueberry</option>
-                        <option>Lemon</option>
-                        <option>Lychee</option>
-                        <option>Peach</option>
-                        <option>Pear</option>
-                      </select>
-                    </datalist>
-                  </label>
-                </li>
-                <li class="no-widget">
-                  <label>
-                    <p>Pick a fruit:</p>
-                    <select name="myFruit">
-                      <option>Cherry</option>
-                      <option>Lemon</option>
-                      <option>Banana</option>
-                      <option>Strawberry</option>
-                      <option>Apple</option>
-                    </select>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a fruit:</p>
-                    <select name="groups">
-                      <optgroup label="fruits">
-                        <option>Banana</option>
-                        <option selected>Cherry</option>
-                        <option>Lemon</option>
-                      </optgroup>
-                      <optgroup label="vegetables">
-                        <option>Carrot</option>
-                        <option>Eggplant</option>
-                        <option>Potato</option>
-                      </optgroup>
-                    </select>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <p>Pick a fruit:</p>
-                    <select multiple name="multi">
-                      <option>Banana</option>
-                      <option>Cherry</option>
-                      <option>Lemon</option>
-                    </select>
-                  </label>
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <input type="checkbox" name="taste_cherry" value="1">
-                    <p>I like cherry</p>
-                  </label>
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
-                    <p>I like banana</p>
-                  </label>  
-                </li>
-                <li class="checkbox">
-                  <label>
-                    <strong><abbr title="required">*</abbr></strong>
-                    <input type="radio" id="title_1" name="title" value="M." required>
-                    <p>Mister</p>
-                  </label>
-                  <label>
-                    <input type="radio" id="title_2" name="title" value="Ms." 
-                    required>
-                    <p>Miss</p>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <progress max="100" value="75">75/100</progress>
-                    <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
-                  </label>
-                </li>
-                <li>
-                  <button type="submit">Send your message</button>
-                  <button type="reset">Erase entered data</button>
-                </li>
-              </ul>   
+              <label>
+                <p>Name:</p>
+                <strong><abbr title="required">*</abbr></strong>
+                <input type="text" name="name" required
+                placeholder="Enter your name..." >
+                <span></span>
+              </label>
+              <label>
+                <p>E-mail:</p>
+                <strong><abbr title="required">*</abbr></strong>
+                <input type="email" name="email" id="email" required placeholder="Enter your email...">
+                <span></span>
+              </label>
+              <label>
+                <input type="checkbox" id="billing-checkbox" checked>
+                <p>I am homeless</p>
+              </label>
+              <label id="billing" class="billing-label disabled-label">
+                <p>Address:</p>
+                <input id="address2" name="address2" type="text" disabled required>
+              </label>
+              <label>
+                <p>Search:</p>
+                <input type="search" name="search" placeholder="Enter what looking...">
+              </label>
+              <label>
+                <p>Phone number:</p>
+                <input type="tel" name="tel" 
+                placeholder="Enter your number...">
+              </label>
+              <label>
+                <p>URL:</p>
+                <input type="url" name="url" 
+                placeholder="Enter url...">
+              </label>
+              <label>
+                <p>Password:</p>
+                <input type="password" name="password" placeholder="Enter password...">
+              </label>
+              <label>
+                <p>How old are you:</p>
+                <input type="number" name="age" min="12" max="65" required placeholder="Enter your age...">
+                <span></span>
+              </label>
+              <p>How many beans can you eat?</p>
+              <label class="indent-left">
+                (<span class="bean-count1"></span>)
+                <input type="range" name="beans" id="beans1"
+                min="0" max="500" step="10">
+              </label>
+              <p>What is your salary?</p>
+              <label class="indent-left">
+                (<span class="salary-count1"></span>$)
+                <input type="range" name="salary" id="salary1" min="0" max="10000" step="100" list="tickmarks">
+                <datalist id="tickmarks">
+                  <option value="0"></option>
+                  <option value="1000"></option>
+                  <option value="2000"></option>
+                  <option value="3000"></option>
+                  <option value="4000"></option>
+                  <option value="5000"></option>
+                  <option value="6000"></option>
+                  <option value="7000"></option>
+                  <option value="8000"></option>
+                  <option value="9000"></option>
+                  <option value="10000"></option>
+                </datalist>
+              </label>
+              <label>
+                <p>Pick a color:</p>
+                <input type="color" name="color">
+              </label>
+              <label for="file">
+                <p>Pick an image:</p>
+                <input type="file" name="file" id="file" accept="image/*">
+              </label>
+              <label>
+                <p>Week and year:</p>
+                <input type="week" name="week">
+              </label>
+              <label>
+                <p>Month and year:</p>
+                <input type="month" name="month">
+              </label>
+              <label>
+                <p>Date:</p>
+                <input type="date" name="expiration">
+              </label>
+              <label>
+                <p>Time:</p>
+                <input type="time" name="time">
+              </label>
+              <label>
+                <p>Date and time:</p>
+                <input type="datetime-local" name="datetime">
+              </label>
+              <label>
+                <p>Message:</p>
+                <textarea name="user_message"
+                placeholder="Enter your message..."></textarea>
+              </label>
+              <p>What is your favorite fruit? (With fallback)</p>
+              <label class="indent-left">
+                <input type="text" name="fruit" list="fruitList">
+                <datalist id="fruitList">
+                  <label for="suggestion">or pick a fruit</label>
+                  <select id="suggestion" name="altFruit">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Blackberry</option>
+                    <option>Blueberry</option>
+                    <option>Lemon</option>
+                    <option>Lychee</option>
+                    <option>Peach</option>
+                    <option>Pear</option>
+                  </select>
+                </datalist>
+              </label>
+              <label>
+                <p>Pick a fruit:</p>
+                <select name="myFruit">
+                  <option>Cherry</option>
+                  <option>Lemon</option>
+                  <option>Banana</option>
+                  <option>Strawberry</option>
+                  <option>Apple</option>
+                </select>
+              </label>
+              <label>
+                <p>Pick a fruit:</p>
+                <select name="groups">
+                  <optgroup label="fruits">
+                    <option>Banana</option>
+                    <option selected>Cherry</option>
+                    <option>Lemon</option>
+                  </optgroup>
+                  <optgroup label="vegetables">
+                    <option>Carrot</option>
+                    <option>Eggplant</option>
+                    <option>Potato</option>
+                  </optgroup>
+                </select>
+              </label>
+              <label>
+                <p>Pick a fruit:</p>
+                <select multiple name="multi">
+                  <option>Banana</option>
+                  <option>Cherry</option>
+                  <option>Lemon</option>
+                </select>
+              </label>
+              <label>
+                <input type="checkbox" name="taste_cherry" value="1">
+                <p>I like cherry</p>
+              </label>
+              <label>
+                <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+                <p>I like banana</p>
+              </label>  
+              <label>
+                <strong><abbr title="required">*</abbr></strong>
+                <input type="radio" id="title_1" name="title" value="M." required>
+                <p>Mister</p>
+                <input type="radio" id="title_2" name="title" value="Ms." 
+                required>
+                <p>Miss</p>
+              </label>
+              <label>
+                <progress max="100" value="75">75/100</progress>
+                <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+              </label>
+
+              <button type="submit">Send your message</button>
+              <button type="reset">Erase entered data</button>
+
             </fieldset>
           </form>
         </section>
       </main>
       <div id="right-side">
 				<aside>
-					<header>IN THIS ARTICLE</header>
-          <a href="#default-forms">Default forms</a><hr>	
+					<header>IN THIS ARTICLE</header>	
           <a href="#stylized">Stylized forms</a>	
 				</aside>
 			</div>

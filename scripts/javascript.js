@@ -27,7 +27,7 @@ cleanOut.addEventListener('click', cleanParagraph);
 
 function cleanParagraph() {
   let children = parent.childNodes;
-  for(7 ; 7 < children.length; 7){
+  for (7; 7 < children.length; 7) {
     parent.removeChild(children[7]);
   }
 }
@@ -64,9 +64,9 @@ function checkGuess() {
   } else {
     lastResult.textContent = 'Wrong!';
     lastResult.style.backgroundColor = 'red';
-    if(userGuess < randomNumber) {
+    if (userGuess < randomNumber) {
       lowOrHi.textContent = 'Last guess was too low!';
-    } else if(userGuess > randomNumber) {
+    } else if (userGuess > randomNumber) {
       lowOrHi.textContent = 'Last guess was too high!';
     }
   }
@@ -91,7 +91,7 @@ function resetGame() {
   guessCount = 1;
 
   var resetParas = document.querySelectorAll('.resultParas p');
-  for (var i = 0 ; i < resetParas.length ; i++) {
+  for (var i = 0; i < resetParas.length; i++) {
     resetParas[i].textContent = '';
   }
 
@@ -133,7 +133,7 @@ function setWeather() {
 let verseChoose = document.querySelector('#verse-choose');
 let poemDisplay = document.querySelector('pre');
 
-verseChoose.onchange = function() {
+verseChoose.onchange = function () {
   let verse = verseChoose.value;
   updateDisplay(verse);
 };
@@ -141,7 +141,7 @@ verseChoose.onchange = function() {
 function updateDisplay(verse) {
   verse = verse.replace(" ", "");
   verse = verse.toLowerCase();
-  let url ='txt/' + verse + '.txt';
+  let url = 'txt/' + verse + '.txt';
   // let request = new XMLHttpRequest();
   // request.open('GET', url);
   // request.responseType = 'text';
@@ -150,8 +150,8 @@ function updateDisplay(verse) {
   // };
   // request.send();
   // ВЕРХНИЙ КОММЕНТАРИЙ И НИЖНЯЯ ЧАСТЬ КОДА ДЕЛАЮТ ОДНУ И ТУ ЖЕ ВЕЩЬ
-  fetch(url).then(function(response) {
-    response.text().then(function(text) {
+  fetch(url).then(function (response) {
+    response.text().then(function (text) {
       poemDisplay.textContent = text;
     });
   });
@@ -166,7 +166,7 @@ verseChoose.value = 'Verse 1';
 const canvas0 = document.querySelector('#balls');
 const ctx0 = canvas0.getContext('2d');
 
-const width = canvas0.width = window.innerWidth/2 + 120;
+const width = canvas0.width = window.innerWidth / 2 + 120;
 const height = canvas0.height = window.innerHeight;
 
 // function to generate random number
@@ -183,88 +183,88 @@ function randomRGB() {
 
 class Ball {
 
-   constructor(x, y, velX, velY, color, size) {
-      this.x = x;
-      this.y = y;
-      this.velX = velX;
-      this.velY = velY;
-      this.color = color;
-      this.size = size;
-   }
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
 
-   draw() {
-      ctx0.beginPath();
-      ctx0.fillStyle = this.color;
-      ctx0.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-      ctx0.fill();
-   }
+  draw() {
+    ctx0.beginPath();
+    ctx0.fillStyle = this.color;
+    ctx0.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx0.fill();
+  }
 
-   update() {
-      if ((this.x + this.size) >= width) {
-         this.velX = -(this.velX);
+  update() {
+    if ((this.x + this.size) >= width) {
+      this.velX = -(this.velX);
+    }
+
+    if ((this.x - this.size) <= 0) {
+      this.velX = -(this.velX);
+    }
+
+    if ((this.y + this.size) >= height) {
+      this.velY = -(this.velY);
+    }
+
+    if ((this.y - this.size) <= 0) {
+      this.velY = -(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+  }
+
+  collisionDetect() {
+    for (const ball of balls) {
+      if (!(this === ball)) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
       }
-
-      if ((this.x - this.size) <= 0) {
-         this.velX = -(this.velX);
-      }
-
-      if ((this.y + this.size) >= height) {
-         this.velY = -(this.velY);
-      }
-
-      if ((this.y - this.size) <= 0) {
-         this.velY = -(this.velY);
-      }
-
-      this.x += this.velX;
-      this.y += this.velY;
-   }
-
-   collisionDetect() {
-      for (const ball of balls) {
-         if (!(this === ball)) {
-            const dx = this.x - ball.x;
-            const dy = this.y - ball.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < this.size + ball.size) {
-              ball.color = this.color = randomRGB();
-            }
-         }
-      }
-   }
+    }
+  }
 
 }
 
 const balls = [];
 
 while (balls.length < 25) {
-   const size = random(10,20);
-   const ball = new Ball(
-      // ball position always drawn at least one ball width
-      // away from the edge of the canvas, to avoid drawing errors
-      random(0 + size,width - size),
-      random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
-      randomRGB(),
-      size
-   );
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size
+  );
 
   balls.push(ball);
 }
 
 function loop() {
-   ctx0.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx0.fillRect(0, 0,  width, height);
+  ctx0.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx0.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-     ball.collisionDetect();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 
 loop();
@@ -328,19 +328,19 @@ image0.src = 'images/legoPeople.png';
 image0.addEventListener('load', () => ctx1.drawImage(image0, 600, 10, 300, 300));
 
 // Фиолетовые треугольники
-ctx1.translate(width/2, height/2);
+ctx1.translate(width / 2, height / 2);
 
 let length = 250;
 let moveOffset = 20;
 
 for (let i = 0; i < length; i++) {
-  ctx1.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
+  ctx1.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
   ctx1.beginPath();
-  ctx1.moveTo(moveOffset,moveOffset);
-  ctx1.lineTo(moveOffset+length,moveOffset);
-  const triHeight = length/2 * Math.tan(degToRad(60));
-  ctx1.lineTo(moveOffset+(length/2),moveOffset+triHeight);
-  ctx1.lineTo(moveOffset,moveOffset);
+  ctx1.moveTo(moveOffset, moveOffset);
+  ctx1.lineTo(moveOffset + length, moveOffset);
+  const triHeight = length / 2 * Math.tan(degToRad(60));
+  ctx1.lineTo(moveOffset + (length / 2), moveOffset + triHeight);
+  ctx1.lineTo(moveOffset, moveOffset);
   ctx1.fill();
 
   length--;
@@ -358,7 +358,7 @@ canvas2.height = height0 = 300;
 ctx2.fillStyle = 'rgb(0, 0, 0)';
 ctx2.fillRect(0, 0, width, height0);
 
-ctx2.translate(width/2, height0/2);
+ctx2.translate(width / 2, height0 / 2);
 
 const image = new Image();
 image.src = 'images/walk-right.png';
@@ -368,9 +368,9 @@ let sprite = 0;
 let posX = 0;
 
 function draw0() {
-  ctx2.fillRect(-(width/2), -(height0/2), width, height0);
+  ctx2.fillRect(-(width / 2), -(height0 / 2), width, height0);
 
-  ctx2.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+  ctx2.drawImage(image, (sprite * 102), 0, 102, 148, 0 + posX, -74, 102, 148);
 
   if (posX % 13 === 0) {
     if (sprite === 5) {
@@ -380,8 +380,8 @@ function draw0() {
     }
   }
 
-  if(posX > width/2) {
-    let newStartPos = -((width/2) + 102);
+  if (posX > width / 2) {
+    let newStartPos = -((width / 2) + 102);
     posX = Math.ceil(newStartPos);
     console.log(posX);
   } else {
@@ -395,20 +395,20 @@ function draw0() {
 var tabs = document.querySelectorAll('.info-box li a');
 var panels = document.querySelectorAll('.info-box article');
 
-for(i = 0; i < tabs.length; i++) {
+for (i = 0; i < tabs.length; i++) {
   var tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
+  tab.onclick = function () {
+    for (i = 0; i < tabs.length; i++) {
       tabs[i].className = '';
     }
 
     tab.className = 'active';
 
-    for(i = 0; i < panels.length; i++) {
+    for (i = 0; i < panels.length; i++) {
       panels[i].className = '';
     }
 
@@ -422,16 +422,16 @@ const sectionZoom = document.querySelector('#zoom-img');
 const thumb0 = document.querySelector('#thumb0');
 thumb0.onmouseover = showImg0;
 thumb0.onmouseout = hideImg;
-const thumb1 = document.querySelector('#thumb1'); 
+const thumb1 = document.querySelector('#thumb1');
 thumb1.onmouseover = showImg1;
 thumb1.onmouseout = hideImg;
-const thumb2 = document.querySelector('#thumb2'); 
+const thumb2 = document.querySelector('#thumb2');
 thumb2.onmouseover = showImg2;
 thumb2.onmouseout = hideImg;
-const thumb3 = document.querySelector('#thumb3'); 
+const thumb3 = document.querySelector('#thumb3');
 thumb3.onmouseover = showImg3;
 thumb3.onmouseout = hideImg;
-const thumb4 = document.querySelector('#thumb4'); 
+const thumb4 = document.querySelector('#thumb4');
 thumb4.onmouseover = showImg4;
 thumb4.onmouseout = hideImg;
 const thumb5 = document.querySelector('#thumb5');
@@ -440,43 +440,43 @@ thumb5.onmouseout = hideImg;
 
 function showImg0() {
   const imgZoom = document.createElement('img');
-  imgZoom.setAttribute('class','zoom');
-  imgZoom.setAttribute('src',thumb0.getAttribute('src'));
+  imgZoom.setAttribute('class', 'zoom');
+  imgZoom.setAttribute('src', thumb0.getAttribute('src'));
   sectionZoom.appendChild(imgZoom);
 }
 
 function showImg1() {
   const imgZoom = document.createElement('img');
-  imgZoom.setAttribute('class','zoom');
-  imgZoom.setAttribute('src',thumb1.getAttribute('src'));
+  imgZoom.setAttribute('class', 'zoom');
+  imgZoom.setAttribute('src', thumb1.getAttribute('src'));
   sectionZoom.appendChild(imgZoom);
 }
 
 function showImg2() {
   const imgZoom = document.createElement('img');
-  imgZoom.setAttribute('class','zoom');
-  imgZoom.setAttribute('src',thumb2.getAttribute('src'));
+  imgZoom.setAttribute('class', 'zoom');
+  imgZoom.setAttribute('src', thumb2.getAttribute('src'));
   sectionZoom.appendChild(imgZoom);
 }
 
 function showImg3() {
   const imgZoom = document.createElement('img');
-  imgZoom.setAttribute('class','zoom');
-  imgZoom.setAttribute('src',thumb3.getAttribute('src'));
+  imgZoom.setAttribute('class', 'zoom');
+  imgZoom.setAttribute('src', thumb3.getAttribute('src'));
   sectionZoom.appendChild(imgZoom);
 }
 
 function showImg4() {
   const imgZoom = document.createElement('img');
-  imgZoom.setAttribute('class','zoom');
-  imgZoom.setAttribute('src',thumb4.getAttribute('src'));
+  imgZoom.setAttribute('class', 'zoom');
+  imgZoom.setAttribute('src', thumb4.getAttribute('src'));
   sectionZoom.appendChild(imgZoom);
 }
 
 function showImg5() {
   const imgZoom = document.createElement('img');
-  imgZoom.setAttribute('class','zoom');
-  imgZoom.setAttribute('src',thumb5.getAttribute('src'));
+  imgZoom.setAttribute('class', 'zoom');
+  imgZoom.setAttribute('src', thumb5.getAttribute('src'));
   sectionZoom.appendChild(imgZoom);
 }
 
