@@ -269,14 +269,6 @@ form {
     margin-right: 24px;
   }
 
-  input:not([type=checkbox], [type=radio]),
-  textarea {
-    font: 1em sans-serif;
-    width: 250px;
-    box-sizing: border-box;
-    border: 1px solid #999;
-  }
-
   .disabled-label p {
     color: #aaa;
   }
@@ -302,6 +294,14 @@ form {
     float: right;
     margin-left: 20px;
   }
+}
+
+input:not([type=checkbox], [type=radio]),
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
 }
 
 input {

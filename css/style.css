@@ -240,14 +240,6 @@ form p:not(label p) {
 form p:not(label p) {
   margin-right: 24px;
 }
-form input:not([type=checkbox], [type=radio]),
-form textarea {
-  font: 1em sans-serif;
-  width: 250px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #999;
-}
 form .disabled-label p {
   color: #aaa;
 }
@@ -264,6 +256,15 @@ form label abbr {
 form button {
   float: right;
   margin-left: 20px;
+}
+
+input:not([type=checkbox], [type=radio]),
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #999;
 }
 
 input {

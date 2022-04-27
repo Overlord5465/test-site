@@ -3,7 +3,7 @@ let count = document.querySelector('.bean-count');
 
 count.textContent = beans.value;
 
-beans.oninput = function() {
+beans.oninput = function () {
   count.textContent = beans.value;
 }
 
@@ -12,26 +12,8 @@ let count0 = document.querySelector('.salary-count');
 
 count0.textContent = salary.value;
 
-salary.oninput = function() {
+salary.oninput = function () {
   count0.textContent = salary.value;
-}
-
-let beans1 = document.querySelector('#beans1');
-let count1 = document.querySelector('.bean-count1');
-
-count1.textContent = beans1.value;
-
-beans1.oninput = function() {
-  count1.textContent = beans1.value;
-}
-
-let salary1 = document.querySelector('#salary1');
-let count01 = document.querySelector('.salary-count1');
-
-count01.textContent = salary1.value;
-
-salary1.oninput = function() {
-  count01.textContent = salary1.value;
 }
 
 // ----------------------------------------------------------------
@@ -58,9 +40,9 @@ function toggleBilling() {
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if(billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
+    if (billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
       billingLabels[i].setAttribute('class', 'billing-label');
-      
+
       billingItems[i].setAttribute('placeholder', 'Enter your address...')
       p.appendChild(span);
     } else {
