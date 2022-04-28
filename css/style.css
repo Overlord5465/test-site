@@ -29,6 +29,11 @@
     letter-spacing: 1px;
   }
 }
+#tanaka {
+  width: 52rem;
+  height: 26rem;
+}
+
 body {
   background: radial-gradient(circle, #00ff23 0%, #ff5656 33%, #ffe73d 67%, #00d4ff 100%);
 }

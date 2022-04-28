@@ -34,7 +34,13 @@
 
 
 
-let userScreen = window.screen.width;
+let userScreen = window.innerWidth;
+let flag_0;
+if (userScreen > 600) {
+  flag_0 = 0;
+} else {
+  flag_0 = 1;
+}
 
 if (userScreen < 600) {
   let leftSide = document.querySelector("#left-side");
@@ -46,3 +52,18 @@ if (userScreen < 600) {
   let main = document.querySelector('main');
   main.id = 'main-rounded';
 }
+
+window.addEventListener(`resize`, event => {
+  userScreen = window.innerWidth;
+  let flag_1;
+  if (userScreen > 600) {
+    flag_1 = 0;
+  } else {
+    flag_1 = 1;
+  }
+
+  if (flag_0 !== flag_1) {
+    location.reload();
+  }
+
+}, false);
