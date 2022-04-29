@@ -40,8 +40,8 @@
 }
 
 #tanaka {
-  width: 52rem;
-  height: 26rem;
+  width: 34rem;
+  height: 17rem;
 }
 
 body {
@@ -200,6 +200,7 @@ a:not(main a) {
 }
 
 main {
+  min-height: 81.2vh;
   background-color: rgb(253, 246, 255);
   overflow-wrap: break-word;
   padding: 3rem;
@@ -215,7 +216,6 @@ main {
 #nav-header,
 #nav-footer {
   display: flex;
-  height: 3.25rem;
   background-color: rgba(110, 142, 196, 0.6);
 
   * {
@@ -225,12 +225,20 @@ main {
 
 }
 
-#nav-header {
+#nav-header,
+#footer {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+}
+
+#nav-header {
+  top: 0;
+}
+
+#nav-footer {
+  bottom: 0;
 }
 
 header,
