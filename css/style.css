@@ -9,6 +9,14 @@
     line-height: 2;
     letter-spacing: 1px;
   }
+
+  video,
+iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 265px;
+    max-height: 265px;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   html {
@@ -19,6 +27,14 @@
     font-size: 1.3rem;
     line-height: 2;
     letter-spacing: 1px;
+  }
+
+  video,
+iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
   }
 }
 @media screen and (min-width: 1200px) {
