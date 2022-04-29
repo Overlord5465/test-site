@@ -18,6 +18,8 @@ clickMy.addEventListener('click', createParagraph);
 
 function createParagraph() {
   let para = document.createElement('p');
+  para.classList.add("text-center");
+
   parent.appendChild(para);
   para.textContent = 'You clicked the button "CLICK ME!"';
 }
@@ -27,8 +29,8 @@ cleanOut.addEventListener('click', cleanParagraph);
 
 function cleanParagraph() {
   let children = parent.childNodes;
-  for (7; 7 < children.length; 7) {
-    parent.removeChild(children[7]);
+  for (5; 5 < children.length; 5) {
+    parent.removeChild(children[5]);
   }
 }
 
@@ -166,7 +168,7 @@ verseChoose.value = 'Verse 1';
 const canvas0 = document.querySelector('#balls');
 const ctx0 = canvas0.getContext('2d');
 
-const width = canvas0.width = window.innerWidth / 2 + 120;
+const width = canvas0.width = window.innerWidth / 2;
 const height = canvas0.height = window.innerHeight;
 
 // function to generate random number

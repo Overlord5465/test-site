@@ -19,6 +19,8 @@
     height: 100%;
     max-width: 265px;
     max-height: 265px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   audio {
@@ -155,6 +157,15 @@ section {
 
 hr {
   margin-top: 2rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center
+}
+
+.text-center {
+  text-align: center;
 }
 
 button {
@@ -685,11 +696,15 @@ input[type="radio"] {
 }
 
 #zoom-img {
-  height: 70rem;
+  height: 50rem;
+
+  img+img {
+    margin-left: 0.5rem;
+  }
 
   #lego {
     position: relative;
-    z-index: 0;
+    top: 0.5rem;
     width: 40rem;
     height: 30rem;
   }
@@ -702,8 +717,8 @@ input[type="radio"] {
 
   .zoom {
     position: relative;
-    bottom: 30.97rem;
-    z-index: 1;
+    bottom: 29.5rem;
+    left: 1.68rem;
     width: 40rem;
     height: 30rem;
   }
