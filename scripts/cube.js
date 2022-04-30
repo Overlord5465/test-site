@@ -1,7 +1,7 @@
 const scene = new THREE.Scene();
 const canvas5465 = document.querySelector('#WebGL-start')
 
-const camera = new THREE.PerspectiveCamera(75, (main.offsetWidth * 0.8) / (window.innerHeight / 2), 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, (main.offsetWidth * 0.95) / (window.innerHeight / 2), 0.1, 1000);
 camera.position.z = 5;
 
 const renderer = new THREE.WebGLRenderer();
