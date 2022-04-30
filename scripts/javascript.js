@@ -419,7 +419,7 @@ function setTabHandler(tab, tabPos) {
 }
 
 // ----------------------zoom img--------------------------
-const sectionZoom = document.querySelector('#zoom-img');
+const sectionZoom = document.querySelector('#zoom');
 
 const thumb0 = document.querySelector('#thumb0');
 thumb0.onmouseover = showImg0;
