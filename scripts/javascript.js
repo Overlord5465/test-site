@@ -168,8 +168,10 @@ verseChoose.value = 'Verse 1';
 const canvas0 = document.querySelector('#balls');
 const ctx0 = canvas0.getContext('2d');
 
-const width = canvas0.width = window.innerWidth / 2;
-const height = canvas0.height = window.innerHeight;
+const main = document.querySelector("main")
+
+const width = canvas0.width = main.offsetWidth * 0.8;
+const height = canvas0.height = window.innerHeight / 2;
 
 // function to generate random number
 
