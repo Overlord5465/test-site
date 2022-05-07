@@ -52,6 +52,13 @@ iframe {
     letter-spacing: 1px;
   }
 }
+#button {
+  border: 3px solid #08a580;
+  outline: none;
+  background: #7aedff;
+  border-radius: 15px;
+}
+
 #tanaka {
   width: 34rem;
   height: 17rem;
