@@ -36,7 +36,7 @@
 
 #punk thead,
 #punk tfoot {
-  background: url(/images/leopardskin.jpg);
+  background: url(../images/leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
