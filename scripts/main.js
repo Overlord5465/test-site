@@ -47,10 +47,10 @@ if (userScreen < 600) {
   leftSide.parentNode.removeChild(leftSide);
   let rightSide = document.querySelector("#right-side");
   rightSide.parentNode.removeChild(rightSide);
-  let root = document.querySelector('#root');
+  let root = document.querySelector('.root');
   root.classList.remove('three-columns');
   let main = document.querySelector('main');
-  main.id = 'main-rounded';
+  main.classList.add('body__main_rounded');
 }
 
 window.addEventListener(`resize`, event => {
