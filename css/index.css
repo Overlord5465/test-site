@@ -1,74 +1,16 @@
 @import "body.css";
-@import "/css/level-1/root.block/root.css";
-@import "/css/level-1/main.block/main.css";
-@import "/css/level-1/text.block/text.css";
-@import "/css/level-1/table.block/table.css";
-@import "/css/level-1/a.block/a.css";
-@import "/css/level-1/form.block/form.css";
-@import "/css/level-1/nav.block/nav.css";
-@import "/css/level-1/aside.block/aside.css";
+@import "root.css";
+@import "main.css";
+@import "text.css";
+@import "table.css";
+@import "a.css";
+@import "form.css";
+@import "nav.css";
+@import "aside.css";
 
-@import "/css/level-2/mobile/mobile.css";
-@import "/css/level-2/pad/pad.css";
-@import "/css/level-2/mobile/mobile.css";
-
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 0.5rem;
-  }
-
-  html * {
-    margin: 0;
-    font-size: 1.3rem;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
-
-  video,
-  iframe {
-    width: 100%;
-    height: 100%;
-    max-width: 265px;
-    max-height: 265px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  audio {
-    width: 100%;
-    max-width: 265px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-  html {
-    font-size: 0.7rem;
-  }
-
-  html * {
-    margin: 0;
-    font-size: 1.3rem;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
-
-  video,
-  iframe {
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    max-height: 400px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  html * {
-    margin: 0;
-    font-size: 1.3rem;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
-}
+@import "mobile.css" screen and (max-width: 600px);
+@import "pad.css" screen and (min-width: 600px) and (max-width: 1200px);
+@import "desktop.css" screen and (min-width: 1200px);
 
 #tanaka {
   width: 34rem;

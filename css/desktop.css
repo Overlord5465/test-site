@@ -1,0 +1,6 @@
+html * {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 2;
+  letter-spacing: 1px;
+}
