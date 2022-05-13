@@ -91,10 +91,6 @@
   padding-left: 0.5rem;
 }
 
-.body__canvas {
-  border: 5px solid rgb(165, 80, 1);
-}
-
 .body__form {
   width: 30rem;
   margin: 0 auto;

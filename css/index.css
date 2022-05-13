@@ -7,6 +7,7 @@
 @import "form.css";
 @import "nav.css";
 @import "aside.css";
+@import "canvas.css";
 
 @import "mobile.css" screen and (max-width: 600px);
 @import "pad.css" screen and (min-width: 600px) and (max-width: 1200px);
