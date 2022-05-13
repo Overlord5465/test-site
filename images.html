@@ -5,45 +5,45 @@
     <meta name="author" content="Overlord5465">
     <meta name="description" content="test-site">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Images</title>
   </head>
 
-  <body>
-    <header id="nav-header">
-      <a href="index.html">Visiting card</a>
+  <body class="body_background_light-gradient">
+    <header class="body__header">
+      <a class="a" href="index.html">Visiting card</a>
       <p>></p>
-      <a href="training.html">Training</a>
+      <a class="a" href="training.html">Training</a>
       <p>></p>
-      <a id="header-location" href="images.html">Images</a>
+      <a class="a" id="header-location" href="images.html">Images</a>
     </header>
 
-    <div id="root" class="three-columns">
+    <div class="root three-columns">
 			<div id="left-side">
-				<nav>
-					<header>TRAINING:</header>
-					<a href="lists.html">Lists</a><hr>
-					<a href="tables.html">Tables</a><hr>
-					<a id="nav-location" href="images.html">Images</a><hr>
-					<a href="forms.html">Forms</a><hr>
-					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
-					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
-					<a href="useful-things.html">Useful things</a><hr>
-          <a href="javascript.html">JavaScript</a><hr>
-          <a href="applications.html">Applications</a>
+				<nav class="body__nav">
+					<header class="nav__header">TRAINING:</header>
+					<a class="a" href="lists.html">Lists</a><hr>
+					<a class="a" href="tables.html">Tables</a><hr>
+					<a class="a" id="nav-location" href="images.html">Images</a><hr>
+					<a class="a" href="forms.html">Forms</a><hr>
+					<a class="a" href="video-audio-iframe.html">Video, audio and iframe</a><hr>
+					<a class="a" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
+					<a class="a" href="useful-things.html">Useful things</a><hr>
+          <a class="a" href="javascript.html">JavaScript</a><hr>
+          <a class="a" href="applications.html">Applications</a>
 				</nav>
 			</div>
-      <main>
-        <h2>Images</h2>
-        <section id="1">
-          <h3>(Subsection) Обычная картинка</h3>
+      <main class="body__main">
+        <h2 class="text_dark">Images</h2>
+        <section id="1" class="main__section">
+          <h3 class="text_lego">(Subsection) Обычная картинка</h3>
           <p>(Text)</p>
           <img src='images/1.jpg' alt="Картинка меняющаяся при клике" title="Картинка меняющаяся при клике">
         </section>
-        <section id="responsive-images">
-          <h3>(Section) Responsive images</h3>
+        <section id="responsive-images" class="main__section">
+          <h3 class="text_lego">(Section) Responsive images</h3>
           <p>Для маленьких экранов маленькие изображения, а для больших большие.</p>
           <img srcset="images/elva-fairy-320w.jpg 320w,
                       images/elva-fairy-480w.jpg 480w,
@@ -64,8 +64,8 @@
             <img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
           </picture>
         </section>
-        <section id="vector-graphics">
-          <h3>(Subsection) Vector graphics</h3>
+        <section id="vector-graphics" class="main__section">
+          <h3 class="text_lego">(Subsection) Vector graphics</h3>
           <p>(Text)</p>
           <svg version="1.1" baseProfile="full" width="300" height="200"
             xmlns="http://www.w3.org/2000/svg">
@@ -75,17 +75,17 @@
         </section>
       </main>
       <div id="right-side">
-				<aside>
-					<header>IN THIS ARTICLE</header>
-          <a href="#1">Обычная картинка</a><hr>
-					<a href="#responsive-images">Responsive images</a><hr>
-          <a href="#vector-graphics">Vector graphics</a>			
+				<aside class="body__aside">
+					<header class="aside__header">IN THIS ARTICLE</header>
+          <a class="a" href="#1">Обычная картинка</a><hr>
+					<a class="a" href="#responsive-images">Responsive images</a><hr>
+          <a class="a" href="#vector-graphics">Vector graphics</a>			
 				</aside>
 			</div>
     </div>
 
-    <footer id="nav-footer">
-      <a href="">© Overlord5465</a>
+    <footer class="body__footer">
+      <a class="a" href="">© Overlord5465</a>
     </footer>
     <script src="scripts/main.js"></script>
   </body>

@@ -40,13 +40,13 @@ function toggleBilling() {
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if (billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
-      billingLabels[i].setAttribute('class', 'billing-label');
+    if (billingLabels[i].getAttribute('class') === 'form__label billing-label disabled-label') {
+      billingLabels[i].setAttribute('class', 'form__label billing-label');
 
       billingItems[i].setAttribute('placeholder', 'Enter your address...')
       p.appendChild(span);
     } else {
-      billingLabels[i].setAttribute('class', 'billing-label disabled-label');
+      billingLabels[i].setAttribute('class', 'form__label billing-label disabled-label');
       billingItems[i].setAttribute('placeholder', '')
       p.removeChild(span);
     }

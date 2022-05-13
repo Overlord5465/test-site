@@ -5,95 +5,95 @@
     <meta name="author" content="Overlord5465">
     <meta name="description" content="test-site">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Forms</title>
   </head>
-  <body>
-    <header id="nav-header">
-      <a href="index.html">Visiting card</a>
+  <body class="body_background_light-gradient">
+    <header class="body__header">
+      <a class="a" href="index.html">Visiting card</a>
       <p>></p>
-      <a href="training.html">Training</a>
+      <a class="a" href="training.html">Training</a>
       <p>></p>
-      <a id="header-location" href="forms.html">Forms</a>
+      <a class="a" id="header-location" href="forms.html">Forms</a>
     </header>
 
-    <div id="root" class="three-columns">
+    <div class="root three-columns">
 			<div id="left-side">
-				<nav>
-					<header>TRAINING:</header>
-					<a href="lists.html">Lists</a><hr>
-					<a href="tables.html">Tables</a><hr>
-					<a href="images.html">Images</a><hr>
-					<a id="nav-location" href="forms.html">Forms</a><hr>
-					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
-					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
-					<a href="useful-things.html">Useful things</a><hr>
-          <a href="javascript.html">JavaScript</a><hr>
-          <a href="applications.html">Applications</a>
+				<nav class="body__nav">
+					<header class="nav__header">TRAINING:</header>
+					<a class="a" href="lists.html">Lists</a><hr>
+					<a class="a" href="tables.html">Tables</a><hr>
+					<a class="a" href="images.html">Images</a><hr>
+					<a id="nav-location"  class="a"href="forms.html">Forms</a><hr>
+					<a class="a" href="video-audio-iframe.html">Video, audio and iframe</a><hr>
+					<a class="a" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
+					<a class="a" href="useful-things.html">Useful things</a><hr>
+          <a class="a" href="javascript.html">JavaScript</a><hr>
+          <a class="a" href="applications.html">Applications</a>
 				</nav>
 			</div>
-      <main>
-        <h1>Forms</h1>
-        <section id="stylized">
-          <h2>Stylized forms</h2>
-          <form action="/my-handling-form-page" method="post">
+      <main class="body__main">
+        <h1 class="text_snake">Forms</h1>
+        <section id="stylized" class="main__section">
+          <h2 class="text_dark">Stylized forms</h2>
+          <form class="body__form" action="/my-handling-form-page" method="post">
             <fieldset>
               <legend>Title form</legend>
-              <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-              <label>
-                <p>Name:</p>
+              <p class="form__p">Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+              <label class="form__label">
+                <p class="form__label-p">Name:</p>
                 <strong><abbr title="required">*</abbr></strong>
                 <input type="text" name="name" required
                 placeholder="Enter your name..." >
                 <span></span>
               </label>
-              <label>
-                <p>E-mail:</p>
+              <label class="form__label">
+                <p class="form__label-p">E-mail:</p>
                 <strong><abbr title="required">*</abbr></strong>
                 <input type="email" name="email" id="email" required placeholder="Enter your email...">
                 <span></span>
               </label>
-              <label>
+              <label class="form__label">
                 <input type="checkbox" id="billing-checkbox" checked>
-                <p>I am homeless</p>
+                <p class="form__label-p">I am homeless</p>
               </label>
-              <label id="billing" class="billing-label disabled-label">
-                <p>Address:</p>
+              <label id="billing" class="form__label billing-label disabled-label">
+                <p class="form__label-p">Address:</p>
                 <input id="address2" name="address2" type="text" disabled required>
               </label>
-              <label>
-                <p>Search:</p>
+              <label class="form__label">
+                <p class="form__label-p">Search:</p>
                 <input type="search" name="search" placeholder="Enter what looking...">
               </label>
-              <label>
-                <p>Phone number:</p>
+              <label class="form__label">
+                <p class="form__label-p">Phone number:</p>
                 <input type="tel" name="tel" 
                 placeholder="Enter your number...">
               </label>
-              <label>
-                <p>URL:</p>
+              <label class="form__label">
+                <p class="form__label-p">URL:</p>
                 <input type="url" name="url" 
                 placeholder="Enter url...">
               </label>
-              <label>
-                <p>Password:</p>
+              <label class="form__label">
+                <p class="form__label-p">Password:</p>
                 <input type="password" name="password" placeholder="Enter password...">
               </label>
-              <label>
-                <p>How old are you:</p>
+              <label class="form__label">
+                <p class="form__label-p">How old are you:</p>
                 <input type="number" name="age" min="12" max="65" required placeholder="Enter your age...">
                 <span></span>
               </label>
-              <p>How many beans can you eat?</p>
-              <label class="indent-left">
+              <p class="form__p">How many beans can you eat?</p>
+              <label class="form__label indent-left">
                 (<span class="bean-count"></span>)
                 <input type="range" name="beans" id="beans"
                 min="0" max="500" step="10">
               </label>
-              <p>What is your salary?</p>
-              <label class="indent-left">
+              <p class="form__p">What is your salary?</p>
+              <label class="form__label indent-left">
                 (<span class="salary-count"></span>$)
                 <input type="range" name="salary" id="salary" min="0" max="10000" step="100" list="tickmarks">
                 <datalist id="tickmarks">
@@ -110,41 +110,41 @@
                   <option value="10000"></option>
                 </datalist>
               </label>
-              <label>
-                <p>Pick a color:</p>
+              <label class="form__label">
+                <p class="form__label-p">Pick a color:</p>
                 <input type="color" name="color">
               </label>
-              <label for="file">
-                <p>Pick an image:</p>
+              <label  class="form__label" for="file">
+                <p class="form__label-p">Pick an image:</p>
                 <input type="file" name="file" id="file" accept="image/*">
               </label>
-              <label>
-                <p>Week and year:</p>
+              <label class="form__label">
+                <p class="form__label-p">Week and year:</p>
                 <input type="week" name="week">
               </label>
-              <label>
-                <p>Month and year:</p>
+              <label class="form__label">
+                <p class="form__label-p">Month and year:</p>
                 <input type="month" name="month">
               </label>
-              <label>
-                <p>Date:</p>
+              <label class="form__label">
+                <p class="form__label-p">Date:</p>
                 <input type="date" name="expiration">
               </label>
-              <label>
-                <p>Time:</p>
+              <label class="form__label">
+                <p class="form__label-p">Time:</p>
                 <input type="time" name="time">
               </label>
-              <label>
-                <p>Date and time:</p>
+              <label class="form__label">
+                <p class="form__label-p">Date and time:</p>
                 <input type="datetime-local" name="datetime">
               </label>
-              <label>
-                <p>Message:</p>
+              <label class="form__label">
+                <p class="form__label-p">Message:</p>
                 <textarea name="user_message"
                 placeholder="Enter your message..."></textarea>
               </label>
-              <p>What is your favorite fruit? (With fallback)</p>
-              <label class="indent-left">
+              <p class="form__p">What is your favorite fruit? (With fallback)</p>
+              <label class="form__label indent-left">
                 <input type="text" name="fruit" list="fruitList">
                 <datalist id="fruitList">
                   <label for="suggestion">or pick a fruit</label>
@@ -160,8 +160,8 @@
                   </select>
                 </datalist>
               </label>
-              <label>
-                <p>Pick a fruit:</p>
+              <label class="form__label">
+                <p class="form__label-p">Pick a fruit:</p>
                 <select name="myFruit">
                   <option>Cherry</option>
                   <option>Lemon</option>
@@ -170,8 +170,8 @@
                   <option>Apple</option>
                 </select>
               </label>
-              <label>
-                <p>Pick a fruit:</p>
+              <label class="form__label">
+                <p class="form__label-p">Pick a fruit:</p>
                 <select name="groups">
                   <optgroup label="fruits">
                     <option>Banana</option>
@@ -185,52 +185,52 @@
                   </optgroup>
                 </select>
               </label>
-              <label>
-                <p>Pick a fruit:</p>
+              <label class="form__label">
+                <p class="form__label-p">Pick a fruit:</p>
                 <select multiple name="multi">
                   <option>Banana</option>
                   <option>Cherry</option>
                   <option>Lemon</option>
                 </select>
               </label>
-              <label>
+              <label class="form__label">
                 <input type="checkbox" name="taste_cherry" value="1">
-                <p>I like cherry</p>
+                <p class="form__label-p">I like cherry</p>
               </label>
-              <label>
+              <label class="form__label">
                 <input type="checkbox" id="taste_2" name="taste_banana" value="2">
-                <p>I like banana</p>
+                <p class="form__label-p">I like banana</p>
               </label>  
-              <label>
+              <label class="form__label">
                 <strong><abbr title="required">*</abbr></strong>
                 <input type="radio" id="title_1" name="title" value="M." required>
-                <p>Mister</p>
+                <p class="form__label-p">Mister</p>
                 <input type="radio" id="title_2" name="title" value="Ms." 
                 required>
-                <p>Miss</p>
+                <p class="form__label-p">Miss</p>
               </label>
-              <label>
+              <label class="form__label">
                 <progress max="100" value="75">75/100</progress>
                 <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
               </label>
 
-              <button type="submit">Send your message</button>
-              <button type="reset">Erase entered data</button>
+              <button class="form__button" type="submit">Send your message</button>
+              <button class="form__button" type="reset">Erase entered data</button>
 
             </fieldset>
           </form>
         </section>
       </main>
       <div id="right-side">
-				<aside>
-					<header>IN THIS ARTICLE</header>	
-          <a href="#stylized">Stylized forms</a>	
+				<aside class="body__aside">
+					<header class="aside__header">IN THIS ARTICLE</header>	
+          <a class="a" href="#stylized">Stylized forms</a>	
 				</aside>
 			</div>
     </div>
 
-    <footer id="nav-footer">
-      <a href="">© Overlord5465</a>
+    <footer class="body__footer">
+      <a class="a" href="">© Overlord5465</a>
     </footer>
     <script src="scripts/main.js"></script>
     <script src="scripts/forms.js"></script>

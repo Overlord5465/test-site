@@ -5,40 +5,40 @@
     <meta name="author" content="Overlord5465">
     <meta name="description" content="test-site">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Grid, flexbox and multicol</title>
   </head>
 
-  <body>
-    <header id="nav-header">
-      <a href="index.html">Visiting card</a>
+  <body class="body_background_light-gradient">
+    <header class="body__header">
+      <a class="a" href="index.html">Visiting card</a>
       <p>></p>
-      <a href="training.html">Training</a>
+      <a class="a" href="training.html">Training</a>
       <p>></p>
-      <a id="header-location" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a>
+      <a id="header-location" class="a" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a>
     </header>
 
-    <div id="root" class="three-columns">
+    <div class="root three-columns">
 			<div id="left-side">
-				<nav>
-					<header>TRAINING:</header>
-					<a href="lists.html">Lists</a><hr>
-					<a href="tables.html">Tables</a><hr>
-					<a href="images.html">Images</a><hr>
-					<a href="forms.html">Forms</a><hr>
-					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
-					<a id="nav-location" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
-					<a href="useful-things.html">Useful things</a><hr>
-          <a href="javascript.html">JavaScript</a><hr>
-          <a href="applications.html">Applications</a>
+				<nav class="body__nav">
+					<header class="nav__header">TRAINING:</header>
+					<a class="a" href="lists.html">Lists</a><hr>
+					<a class="a" href="tables.html">Tables</a><hr>
+					<a class="a" href="images.html">Images</a><hr>
+					<a class="a" href="forms.html">Forms</a><hr>
+					<a class="a" href="video-audio-iframe.html">Video, audio and iframe</a><hr>
+					<a id="nav-location" class="a" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
+					<a class="a" href="useful-things.html">Useful things</a><hr>
+          <a class="a" href="javascript.html">JavaScript</a><hr>
+          <a class="a" href="applications.html">Applications</a>
 				</nav>
 			</div>
-      <main>
-        <h2>Grid, flexbox and multicol</h2>
-        <section id="grid">
-          <h3>(Subsection) Grid</h3>
+      <main class="body__main">
+        <h2 class="text_dark">Grid, flexbox and multicol</h2>
+        <section id="grid" class="main__section">
+          <h3 class="text_lego">(Subsection) Grid</h3>
           <div class="wrapper">
             <div class="col">1</div>
             <div class="col">2</div>
@@ -58,8 +58,8 @@
             <div class="col span2 content">16</div>
           </div>
         </section>
-        <section id="multicol">
-          <h3>(Subsection) Multicol</h3>
+        <section id="multicol" class="main__section">
+          <h3 class="tetx_lego">(Subsection) Multicol</h3>
           <div class="container">
             <div class="card">
               <h2>I am the heading</h2>
@@ -114,16 +114,16 @@
         </section>
       </main>
       <div id="right-side">
-				<aside>
-					<header>IN THIS ARTICLE</header>
-					<a href="#grid">Grid</a><hr>
-					<a href="#multicol">Multicol</a>	
+				<aside class="body__aside">
+					<header class="aside__header">IN THIS ARTICLE</header>
+					<a class="a" href="#grid">Grid</a><hr>
+					<a class="a" href="#multicol">Multicol</a>	
 				</aside>
 			</div>
     </div>
 
-    <footer id="nav-footer">
-      <a href="">© Overlord5465</a>
+    <footer class="body__footer">
+      <a class="a" href="">© Overlord5465</a>
     </footer>
     <script src="scripts/main.js"></script>
   </body>

@@ -1,0 +1,13 @@
+.a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.a:hover {
+  background-color: rgba(219, 219, 219);
+  border-radius: 2rem;
+}
+
+.a:active {
+  color: white;
+}

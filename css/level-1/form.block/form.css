@@ -1,0 +1,189 @@
+.form__label-p {
+  display: inline;
+}
+
+/* p not:(label p) */
+.form__label,
+.form__p {
+  display: block;
+  margin-bottom: 1.5rem;
+  float: right;
+  clear: both;
+}
+
+.form__p {
+  margin-right: 1.5rem;
+}
+
+.form__label_disabled {
+  color: #aaa;
+}
+
+.form__label:last-child:not(input:required+span) {
+  margin-right: 1.5rem;
+}
+
+.form__label span,
+.form__label abbr {
+  margin-right: 0;
+}
+
+.form__button {
+  float: right;
+  margin-left: 1rem;
+}
+
+input:not([type=checkbox], [type=radio]),
+textarea {
+  font: 1em sans-serif;
+  width: 15rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input {
+  -webkit-box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+  height: 2.3rem;
+}
+
+input[type=text]:disabled {
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+input:optional {
+  border: 1px solid silver;
+}
+
+input+span {
+  position: relative;
+}
+
+input:required+span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  padding: 0px 10px;
+  top: -1.7rem;
+  left: -5rem;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid+span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid+span::before {
+  content: "✓";
+  color: green;
+}
+
+input:out-of-range+span::after {
+  color: white;
+  background-color: red;
+  width: 12rem;
+  content: "Outside allowable value range";
+  left: -14rem;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  background-color: white;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type=checkbox]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1.2px;
+  top: -0.55em;
+  visibility: hidden;
+}
+
+input[type=checkbox]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #fff;
+}
+
+input[type=radio]::before {
+  display: block;
+  content: " ";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 6px;
+  background-color: lime;
+  font-size: 1.2em;
+  -webkit-transform: translate(0.13rem, 0.13rem) scale(0);
+  transform: translate(0.13rem, 0.13rem) scale(0);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+input[type=radio]:checked {
+  border: 2px solid #00bd00;
+}
+
+input[type=radio]:checked::before {
+  -webkit-transform: translate(0.13rem, 0.13rem) scale(1);
+  transform: translate(0.13rem, 0.13rem) scale(1);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+input[type=radio]:indeterminate {
+  border: 0.1rem solid red;
+  -webkit-animation: 0.4s linear infinite alternate border-pulse;
+  animation: 0.4s linear infinite alternate border-pulse;
+}
+
+@-webkit-keyframes border-pulse {
+  from {
+    border: 0.1rem solid red;
+  }
+
+  to {
+    border: 0.3rem solid red;
+  }
+}
+
+@keyframes border-pulse {
+  from {
+    border: 0.1rem solid red;
+  }
+
+  to {
+    border: 0.3rem solid red;
+  }
+}

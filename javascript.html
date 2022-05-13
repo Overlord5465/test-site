@@ -5,7 +5,7 @@
     <meta name="author" content="Overlord5465">
     <meta name="description" content="test-site">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>JavaScript</title>
@@ -13,42 +13,42 @@
     <script src="scripts/cube.js" defer></script>
   </head>
 
-  <body>
-    <header id="nav-header">
-      <a href="index.html">Visiting card</a>
+  <body class="body_background_light-gradient">
+    <header class="body__header">
+      <a class="a" href="index.html">Visiting card</a>
       <p>></p>
-      <a href="training.html">Training</a>
+      <a class="a" href="training.html">Training</a>
       <p>></p>
-      <a id="header-location" href="javascript.html">JavaScript</a>
+      <a id="header-location" class="a" href="javascript.html">JavaScript</a>
     </header>
 
-    <div id="root" class="three-columns">
+    <div class="root three-columns">
 			<div id="left-side">
-				<nav>
-					<header>TRAINING:</header>
-					<a href="lists.html">Lists</a><hr>
-					<a href="tables.html">Tables</a><hr>
-					<a href="images.html">Images</a><hr>
-					<a href="forms.html">Forms</a><hr>
-					<a href="video-audio-iframe.html">Video, audio and iframe</a><hr>
-					<a href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
-					<a href="useful-things.html">Useful things</a><hr>
-          <a  id="nav-location" href="javascript.html">JavaScript</a><hr>
-          <a href="applications.html">Applications</a>
+				<nav class="body__nav">
+					<header class="nav__header">TRAINING:</header>
+					<a class="a" href="lists.html">Lists</a><hr>
+					<a class="a" href="tables.html">Tables</a><hr>
+					<a class="a" href="images.html">Images</a><hr>
+					<a class="a" href="forms.html">Forms</a><hr>
+					<a class="a" href="video-audio-iframe.html">Video, audio and iframe</a><hr>
+					<a class="a" href="grid-flexbox-multicol.html">Grid, flexbox and multicol</a><hr>
+					<a class="a" href="useful-things.html">Useful things</a><hr>
+          <a  id="nav-location" class="a" href="javascript.html">JavaScript</a><hr>
+          <a class="a" href="applications.html">Applications</a>
 				</nav>
 			</div>
-      <main>
-        <h1>JavaScript</h1>
-        <section id="parent">
-          <h2>Сreating and deleting elements with a button</h2>
-          <div class="center">
-            <p id="click-me" class="button">Click me!</p>
-            <p id="clean-out" class="button">Сlean out</p>
+      <main class="body__main">
+        <h1 class="text_snake">JavaScript</h1>
+        <section id="parent" class="main__section">
+          <h2 class="text_dark">Сreating and deleting elements with a button</h2>
+          <div class="main_center">
+            <p id="click-me" class="text__button">Click me!</p>
+            <p id="clean-out" class="text__button">Сlean out</p>
           </div>
         </section>
         <hr>
-        <section id="number-guessing-game">
-          <h2>Number guessing game</h2>
+        <section id="number-guessing-game" class="main__section">
+          <h2 class="text_dark">Number guessing game</h2>
           <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
           <div class="form">
             <label for="guessField">Enter a guess: </label>
@@ -62,8 +62,8 @@
           </div>
         </section>
         <hr>
-        <section id="give-advice">
-          <h2>give advice when choosing an option</h2>
+        <section id="give-advice" class="main__section">
+          <h2 class="text_dark">give advice when choosing an option</h2>
           <label for="weather">Select the weather type today: </label>
           <select id="weather">
             <option value="">--Make a choice--</option>
@@ -75,10 +75,10 @@
           <p id="advice"></p>
         </section>
         <hr>
-        <section id="verse">
-          <h2>Verse</h2>
+        <section id="verse" class="main__section">
+          <h2 class="text_dark">Verse</h2>
           <label for="verse-choose">
-            <p>Choose a verse:</p>
+            <p class="form__label-p ">Choose a verse:</p>
             <select id="verse-choose" name="verse-choose">
               <option>Verse 1</option>
               <option>Verse 2</option>
@@ -86,16 +86,16 @@
               <option>Verse 4</option>
             </select>
           </label>
-          <h3>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h3>
+          <h3 class="text_lego">The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h3>
           <pre></pre>
         </section>
         <hr>
-        <section id="tab" class="info-box">
-          <h2>Tab</h2>
+        <section id="tab" class="main__section info-box">
+          <h2 class="text_dark">Tab</h2>
           <ul>
-            <li><a href="#tab" class="active">Tab 1</a></li>
-            <li><a href="#tab">Tab 2</a></li>
-            <li><a href="#tab">Tab 3</a></li>
+            <li><a href="#tab" class="a active">Tab 1</a></li>
+            <li><a class="a" href="#tab">Tab 2</a></li>
+            <li><a class="a" href="#tab">Tab 3</a></li>
           </ul>
           <div class="panels">
             <article class="active-panel">
@@ -118,9 +118,9 @@
           </div>
         </section>        
         <hr>
-        <section id="zoom-img">
-          <h2>Zoom image</h2>
-          <div class="center">
+        <section id="zoom-img"  class="main__section">
+          <h2 class="text_dark">Zoom image</h2>
+          <div class="main_center">
             <img id="thumb0" src="images/pirate.jpg" tabindex="0" alt="A lego pirate figure with a cutlass, pistol, tricornered hat, peg leg, long hair and beard.">
             <img id="thumb1" src="images/ironMan.jpg" tabindex="0">
             <img id="thumb2" src="images/droids.jpg" tabindex="0">
@@ -128,52 +128,52 @@
             <img id="thumb4" src="images/legoRickAndMorty.jpg" tabindex="0">
             <img id="thumb5" src="images/legoSonic.webp" tabindex="0">
           </div>
-          <div class="center">
+          <div class="main_center">
             <img id="lego" src="images/lego.png" alt="">
           </div>
-          <div id="zoom" class="center">
+          <div id="zoom" class="main_center">
 
           </div>
         </section>
-        <section id="canvas">
-          <h2>Canvas</h2>
-          <h3>Elementary examples</h3>
+        <section id="canvas" class="main__section">
+          <h2 class="text_dark">Canvas</h2>
+          <h3 class="text_lego">Elementary examples</h3>
           <div class="center">
             <canvas id="myCanvas"></canvas>
           </div>
-          <h3>Animation balls</h3>
+          <h3 class="text_lego">Animation balls</h3>
           <div class="center">
             <canvas id="balls"></canvas>
           </div>
-          <h3>Animation character</h3>
+          <h3 class="text_lego">Animation character</h3>
           <div class="center">
             <canvas id="character"></canvas>
           </div>
         </section>
         <hr>
-        <section id="WebGL">
-          <h2>WebGL</h2>
+        <section id="WebGL" class="main__section">
+          <h2 class="text_dark">WebGL</h2>
           <div id="WebGL-start" class="center">
           </div>
         </section>
         <hr>
       </main>
       <div id="right-side">
-				<aside>
-					<header>IN THIS ARTICLE</header>
-          <a href="#parent">Button</a><hr>
-          <a href="#number-guessing-game">Number guessing</a><hr>	
-          <a href="#give-advice">Give advice</a><hr>
-          <a href="#verse">Verse</a><hr>
-          <a href="#tab">Tab</a><hr>
-          <a href="#canvas">Canvas</a><hr>
-          <a href="#WebGL">WebGL</a>
+				<aside class="body__aside">
+					<header class="aside__header">IN THIS ARTICLE</header>
+          <a class="a" href="#parent">Button</a><hr>
+          <a class="a" href="#number-guessing-game">Number guessing</a><hr>	
+          <a class="a" href="#give-advice">Give advice</a><hr>
+          <a class="a" href="#verse">Verse</a><hr>
+          <a class="a" href="#tab">Tab</a><hr>
+          <a class="a" href="#canvas">Canvas</a><hr>
+          <a class="a" href="#WebGL">WebGL</a>
 				</aside>
 			</div>
     </div>
 
-    <footer id="nav-footer">
-      <a href="">© Overlord5465</a>
+    <footer class="body__footer">
+      <a class="a" href="">© Overlord5465</a>
     </footer>
     <script src="scripts/main.js"></script>
     <script src="scripts/javascript.js"></script>
