@@ -3,11 +3,11 @@ let ctx = canvas.getContext("2d");
 
 const main = document.querySelector("main")
 
-const width = canvas.width = main.offsetWidth * 0.9;
-const height = canvas.height = window.innerHeight / 2;
+const canvasWidth = canvas.width = main.offsetWidth * 0.9;
+const canvasHeight = canvas.height = window.innerHeight / 2;
 
-let x = canvas.width / 2;
-let y = canvas.height - 30;
+let x = canvasWidth / 2;
+let y = canvasHeight - 30;
 
 let dx = 2;
 let dy = -2;
@@ -16,19 +16,20 @@ let ballRadius = 10;
 
 let paddleHeight = 10;
 let paddleWidth = 75;
-let paddleX = (canvas.width - paddleWidth) / 2;
-let paddleY = canvas.height - paddleHeight;
+let paddleBottomDistance = 10;
+let paddleX = (canvasWidth - paddleWidth) / 2;
+let paddleY = canvasHeight - paddleHeight - paddleBottomDistance;
 
 let rightPressed = false;
 let leftPressed = false;
 
-let brickRowCount = 3;
+let brickRowCount = 4;
 let brickColumnCount = 5;
-let brickWidth = 75;
-let brickHeight = 20;
-let brickPadding = 10;
+let brickPadding = 30;
 let brickOffsetTop = 30;
 let brickOffsetLeft = 30;
+let brickWidth = 50;
+let brickHeight = 20;
 
 let bricks = [];
 for (let c = 0; c < brickColumnCount; c++) {
@@ -41,6 +42,12 @@ for (let c = 0; c < brickColumnCount; c++) {
 let score = 0;
 
 let lives = 3;
+
+function defaultLiveAndScore() {
+  score = 0;
+
+  lives = 3;
+}
 
 function drawBall() {
   ctx.beginPath();
@@ -62,7 +69,8 @@ function drawBricks() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       if (bricks[c][r].status == 1) {
-        let brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
+        let brickX = (c * (brickWidth + brickPadding)) +
+          (canvasWidth - (brickColumnCount * (brickWidth + brickPadding))) / 2;
         let brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
         bricks[c][r].x = brickX;
         bricks[c][r].y = brickY;
@@ -76,10 +84,40 @@ function drawBricks() {
   }
 }
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+function drawScore() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Score: " + score + "/" + (brickRowCount * brickColumnCount), 8, 20);
+}
+
+function drawLives() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: " + lives, canvasWidth - 65, 20);
+}
+
+function drawGameOver() {
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
   ctx.fillStyle = 'rgb(0, 0, 0)';
-  ctx.fillRect(0, 0, width, height);
+  ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+  ctx.font = "32px Arial";
+  ctx.fillStyle = "red";
+  ctx.fillText("GAME OVER.", canvasWidth / 3, canvasHeight / 2);
+}
+
+function drawWin() {
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+  ctx.font = "32px Arial";
+  ctx.fillStyle = "green";
+  ctx.fillText("YOU WIN, CONGRATULATIONS!", canvasWidth / 6, canvasHeight / 2);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillRect(0, 0, canvasWidth, canvasHeight);
   drawBricks();
   drawBall();
   drawPaddle();
@@ -89,38 +127,39 @@ function draw() {
   x += dx;
   y += dy;
 
-  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  if (x + dx > canvasWidth - ballRadius || x + dx < ballRadius) {
     dx = -dx;
   }
 
   if (y + dy < ballRadius) {
     dy = -dy;
-  } else if (y + dy > canvas.height - ballRadius) {
+  } else if (y + dy > canvasHeight - ballRadius - paddleBottomDistance * 1.4) {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
       lives--;
-      if (!lives) {
-        alert("GAME OVER");
-        document.location.reload();
-      } else {
-        x = canvas.width / 2;
-        y = canvas.height - 30;
-        dx = 2;
-        dy = -2;
-        paddleX = (canvas.width - paddleWidth) / 2;
-      }
+
+      x = canvasWidth / 2;
+      y = canvasHeight - 30;
+      dx = 2;
+      dy = -2;
+      paddleX = (canvasWidth - paddleWidth) / 2;
+
     }
   }
 
-  if (rightPressed && paddleX < canvas.width - paddleWidth) {
-    paddleX += 7;
+  if (rightPressed && paddleX < canvasWidth - paddleWidth) {
+    paddleX += 4;
   } else if (leftPressed && paddleX > 0) {
-    paddleX -= 7;
+    paddleX -= 4;
   }
-
-  requestAnimationFrame(draw);
-
+  if (lives > 0 && score < brickRowCount * brickColumnCount) {
+    requestAnimationFrame(draw);
+  } else if (score == brickRowCount * brickColumnCount) {
+    drawWin();
+  } else {
+    drawGameOver();
+  }
 }
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -130,7 +169,7 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 function mouseMoveHandler(e) {
   let relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > paddleWidth / 2 &&
-    relativeX < canvas.width - paddleWidth / 2) {
+    relativeX < canvasWidth - paddleWidth / 2) {
     paddleX = relativeX - paddleWidth / 2;
   }
 }
@@ -157,31 +196,18 @@ function collisionDetection() {
     for (let r = 0; r < brickRowCount; r++) {
       let b = bricks[c][r];
       if (b.status == 1) {
-        if (x > b.x && x < b.x + brickWidth &&
-          y > b.y && y < b.y + brickHeight) {
-          dy = -dy;
+        if (x > b.x - ballRadius && x < b.x + brickWidth + ballRadius &&
+          y > b.y - ballRadius && y < b.y + brickHeight + ballRadius) {
+          if (x - 3 < b.x - ballRadius || x + 3 > b.x + brickWidth + ballRadius) {
+            dx = -dx;
+          } else {
+            dy = -dy;
+          }
           b.status = 0;
           score++;
-          if (score == brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATULATIONS!");
-            document.location.reload();
-          }
         }
       }
     }
   }
 }
 
-function drawScore() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Score: " + score, 8, 20);
-}
-
-function drawLives() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
-}
-
-let interval = draw();;

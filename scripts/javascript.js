@@ -488,4 +488,3 @@ function hideImg() {
   const imgZoom = document.querySelector('.zoom');
   sectionZoom.removeChild(imgZoom);
 }
-
