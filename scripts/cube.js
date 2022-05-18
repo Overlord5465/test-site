@@ -6,7 +6,8 @@ camera.position.z = 5;
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize((main.offsetWidth * 0.9), (window.innerHeight / 2));
-canvas5465.appendChild(renderer.domElement);
+const canvasCube = canvas5465.appendChild(renderer.domElement);
+canvasCube.setAttribute("class", "canvas_center");
 
 let cube;
 
