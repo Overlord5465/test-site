@@ -11,8 +11,8 @@ function spaceRanger() {
   const bulletRadius = 3;
 
   // player
-  const playerHeight = 10;
-  const playerWidth = 75;
+  const playerHeight = 50;
+  const playerWidth = 50;
   const playerBottomDistance = 10;
   let playerX = (canvasWidth - playerWidth) / 2;
   let playerY = canvasHeight - playerHeight - playerBottomDistance;
@@ -41,6 +41,9 @@ function spaceRanger() {
   // ???
   let score = 0;
   let lives = 2;
+  let numberOfBullets = 100;
+  let red = 55;
+  let green = 200;
 
   // main
   function draw() {
@@ -52,7 +55,9 @@ function spaceRanger() {
     drawPlayer();
     drawScore();
     drawLives();
+    drawNumberOfBullets(`rgb(${red}, ${green} ,0)`);
 
+    player()
 
     enemiesCollisionDetection();
     playerCollisionDetection();
@@ -81,11 +86,39 @@ function spaceRanger() {
             enemy.accumulator = 0;
           }
 
+          // Перевод из градусов в радианы
+          function degToRad(degrees) {
+            return degrees * Math.PI / 180;
+          };
+
+          // корпус
+          ctx.fillStyle = 'red';
           ctx.beginPath();
-          ctx.rect(enemy.x, enemy.y, enemyWidth, enemyHeight);
-          ctx.fillStyle = "#0095DD";
+          ctx.moveTo(enemy.x, enemy.y);
+          ctx.lineTo(enemy.x + enemyWidth, enemy.y);
+
+          let triHeight = enemyHeight / 2 * Math.tan(degToRad(60));
+          ctx.lineTo(enemy.x + enemyWidth / 2, enemy.y + triHeight);
+          ctx.lineTo(enemy.x, enemy.y);
           ctx.fill();
-          ctx.closePath();
+
+          // окно
+          ctx.fillStyle = 'blue';
+          ctx.beginPath();
+          const triSide = enemy.y + enemyHeight / 3;
+          ctx.moveTo(enemy.x + enemyWidth / 3, triSide);
+          ctx.lineTo(enemy.x + enemyWidth * 2 / 3, triSide);
+
+          triHeight = enemyHeight / 2 * Math.tan(degToRad(60));
+          ctx.lineTo(enemy.x + enemyWidth / 2, triSide + triHeight * 0.5);
+          ctx.lineTo(enemy.x + enemyWidth / 3, triSide);
+          ctx.fill();
+
+          // ctx.beginPath();
+          // ctx.rect(enemy.x, enemy.y, enemyWidth, enemyHeight);
+          // ctx.fillStyle = "#0095DD";
+          // ctx.fill();
+          // ctx.closePath();
         }
       }
     }
@@ -105,22 +138,14 @@ function spaceRanger() {
         bullets.splice(i, 1);
       }
     }
-
-
-
-    // ctx.beginPath();
-    // ctx.arc(x, y, bulletRadius, 0, Math.PI * 2);
-    // ctx.fillStyle = "#0095DD";
-    // ctx.fill();
-    // ctx.closePath();
   }
 
   function drawPlayer() {
-    ctx.beginPath();
-    ctx.rect(playerX, playerY, playerWidth, playerHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+    // ctx.beginPath();
+    // ctx.rect(playerX, playerY, playerWidth, playerHeight);
+    // ctx.fillStyle = "#0095DD";
+    // ctx.fill();
+    // ctx.closePath();
 
     if (rightPressed && playerX < canvasWidth - playerWidth) {
       playerX += 4;
@@ -131,14 +156,20 @@ function spaceRanger() {
 
   function drawScore() {
     ctx.font = "20px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "yellow";
     ctx.fillText("Score: " + score + "/" + (enemyRowCount * enemyColumnCount), 8, 20);
   }
 
   function drawLives() {
     ctx.font = "20px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: " + lives, canvasWidth - 90, 20);
+    ctx.fillStyle = "rgb(0, 255, 100)";
+    ctx.fillText("Lives: " + lives, canvasWidth - 110, 20);
+  }
+
+  function drawNumberOfBullets(colText) {
+    ctx.font = "20px Arial";
+    ctx.fillStyle = colText;
+    ctx.fillText("Bullets: " + numberOfBullets, canvasWidth - 125, 60);
   }
 
   function drawEnd(text, colText) {
@@ -214,8 +245,13 @@ function spaceRanger() {
       leftPressed = true;
     }
 
-    if (e.key === " ") {
-      bullets.push({ x: playerX + playerWidth / 2, y: playerY - 10, dx: 0, dy: -8, status: 1 })
+    if (e.key === "Control") {
+      if (numberOfBullets > 0) {
+        bullets.push({ x: playerX + playerWidth / 2, y: playerY - 10, dx: 0, dy: -8, status: 1 })
+        numberOfBullets--;
+        red += 2;
+        green -= 2;
+      }
     }
   }
 
@@ -236,4 +272,63 @@ function spaceRanger() {
   }
 
   draw();
+
+  function player() {
+
+    // Перевод из градусов в радианы
+    function degToRad(degrees) {
+      return degrees * Math.PI / 180;
+    };
+
+    // крылья
+    ctx.fillStyle = 'silver';
+    ctx.beginPath();
+    const triSide = playerY + playerHeight * 0.8;
+    ctx.moveTo(playerX, triSide);
+    ctx.lineTo(playerX + playerWidth, triSide);
+
+    const triHeight = playerHeight / 2 * Math.tan(degToRad(60));
+    ctx.lineTo(playerX + playerWidth / 2, triSide - triHeight);
+    ctx.lineTo(playerX, triSide);
+    ctx.fill();
+
+    // турбины на крыльях
+    for (let i = 0; i < 7; i++) {
+      ctx.beginPath();
+      ctx.arc(playerX + playerWidth / 8 + playerWidth / 8 * i, triSide, playerWidth / 16, 0, Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    // турбины на корпусе
+    for (let i = 0; i < 3; i++) {
+      ctx.beginPath();
+      ctx.arc(playerX + playerWidth / 2.5 + playerWidth / 10 * i, playerY + playerHeight, playerWidth / 18, 0, Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    // корпус
+    ctx.beginPath();
+    ctx.rect(playerX + playerWidth / 3, playerY, playerWidth * 1 / 3, playerHeight);
+    ctx.fillStyle = "silver";
+    ctx.fill();
+    ctx.closePath();
+
+    // верхужка
+    ctx.beginPath();
+    ctx.arc(playerX + playerWidth / 2, playerY, playerWidth / 6, Math.PI, Math.PI * 2);
+    ctx.fillStyle = "silver";
+    ctx.fill();
+    ctx.closePath();
+
+    // стекло
+    ctx.beginPath();
+    ctx.arc(playerX + playerWidth / 2, playerY + playerWidth / 32, playerWidth / 9, Math.PI, Math.PI * 2);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+    ctx.closePath();
+  }
 }

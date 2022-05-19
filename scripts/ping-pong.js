@@ -79,7 +79,7 @@ function pingPong() {
         if (brick.status == 1) {
           ctx.beginPath();
           ctx.rect(brick.x, brick.y, brickWidth, brickHeight);
-          ctx.fillStyle = "#0095DD";
+          ctx.fillStyle = "purple";
           ctx.fill();
           ctx.closePath();
         }
@@ -90,7 +90,7 @@ function pingPong() {
   function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "white";
     ctx.fill();
     ctx.closePath();
   }
@@ -111,13 +111,13 @@ function pingPong() {
 
   function drawScore() {
     ctx.font = "20px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "yellow";
     ctx.fillText("Score: " + score + "/" + (brickRowCount * brickColumnCount), 8, 20);
   }
 
   function drawLives() {
     ctx.font = "20px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "rgb(0, 255, 100)";
     ctx.fillText("Lives: " + lives, canvasWidth - 90, 20);
   }
 
