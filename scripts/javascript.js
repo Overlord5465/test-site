@@ -318,12 +318,12 @@ ctx1.fill();
 ctx1.strokeStyle = 'white';
 ctx1.lineWidth = 1;
 ctx1.font = '36px arial';
-ctx1.strokeText('Canvas text', 300, 50);
+ctx1.strokeText('Canvas text', 800, 50);
 
 // Красный текст
 ctx1.fillStyle = 'red';
 ctx1.font = '48px georgia';
-ctx1.fillText('Canvas text', 300, 150);
+ctx1.fillText('Canvas text', 800, 150);
 
 // Lego people---Из-за треугольников что-то пошло не так!!!!!!!! ('-') плак плак
 const image0 = new Image();

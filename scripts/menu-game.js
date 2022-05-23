@@ -88,7 +88,7 @@ function menuGame() {
       if (isDrawing) {
         if (buttonPressed) {
           const clone = canvas.cloneNode(true);
-          const parent = document.querySelector("#canvas-2d");
+          const parent = document.querySelector("#applications");
           parent.removeChild(canvas);
           parent.appendChild(clone);
           start.launch();
