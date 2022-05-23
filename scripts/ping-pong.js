@@ -14,8 +14,8 @@ function pingPong() {
   let ballCollided = false;
 
   // player
-  const playerHeight = 10;
-  const playerWidth = 75;
+  const playerWidth = canvasWidth / 12;
+  const playerHeight = canvasHeight / 60;
   const playerBottomDistance = 10;
   let playerX = (canvasWidth - playerWidth) / 2;
   let playerY = canvasHeight - playerHeight - playerBottomDistance;
@@ -23,7 +23,7 @@ function pingPong() {
   let leftPressed = false;
 
   // brick
-  const brickRowCount = 6;
+  const brickRowCount = 4;
   const brickColumnCount = 7;
   const brickPadding = 50;
   const brickOffsetTop = 30;

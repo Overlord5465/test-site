@@ -1,3 +1,5 @@
+const body = document.querySelector("body");
+
 function menuGame() {
   class Button {
     constructor(x, y, width, height, text) {
