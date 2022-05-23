@@ -533,3 +533,47 @@ function draw1() {
 
   requestAnimationFrame(draw1);
 }
+
+function audioVisualization() {
+  let audio, context, analyzer, src, array, logo, sectionLogo;
+
+  sectionLogo = document.querySelector("#section__logo")
+
+  logo = document.querySelector("#logo").style;
+
+  audio = document.querySelector("audio");
+
+  sectionLogo.onclick = function () {
+    if (!context) {
+      preparation();
+    }
+    if (audio.paused) {
+      audio.play();
+      loop1();
+    } else {
+      audio.pause();
+    }
+  }
+
+  function preparation() {
+    context = new AudioContext();
+    analyzer = context.createAnalyser();
+    src = context.createMediaElementSource(audio);
+    src.connect(analyzer);
+    analyzer.connect(context.destination)
+    loop1();
+  }
+
+  function loop1() {
+    if (!audio.paused) {
+      window.requestAnimationFrame(loop1);
+    }
+    array = new Uint8Array(analyzer.frequencyBinCount);
+    analyzer.getByteFrequencyData(array);
+
+    logo.minHeight = (array[40]) * 1.5 + "px";
+    logo.minWidth = (array[40]) * 1.5 + "px";
+  }
+}
+
+audioVisualization()

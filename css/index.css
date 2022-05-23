@@ -23,6 +23,28 @@
   border-radius: 50%;
 }
 
+#logo {
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 50%;
+  background: red;
+}
+
+#section__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50vw;
+  min-height: 50vh;
+  background: #1e1e1e;
+  border: 5px solid rgb(165, 80, 1);
+}
+
+hr {
+  margin-top: 20px;
+}
+
 .guessSubmit {
   height: initial;
 }
