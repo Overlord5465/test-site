@@ -387,7 +387,7 @@ function draw0() {
   if (posX > width / 2) {
     let newStartPos = -((width / 2) + 102);
     posX = Math.ceil(newStartPos);
-    console.log(posX);
+    // console.log(posX);
   } else {
     posX += 2;
   }
@@ -534,12 +534,13 @@ function draw1() {
   requestAnimationFrame(draw1);
 }
 
-function audioVisualization() {
+// Звуки из аудио
+function audioVisualization1() {
   let audio, context, analyzer, src, array, logo, sectionLogo;
 
-  sectionLogo = document.querySelector("#section__logo")
+  sectionLogo = document.querySelector("#section__logo1")
 
-  logo = document.querySelector("#logo").style;
+  logo = document.querySelector("#logo1").style;
 
   audio = document.querySelector("audio");
 
@@ -560,7 +561,7 @@ function audioVisualization() {
     analyzer = context.createAnalyser();
     src = context.createMediaElementSource(audio);
     src.connect(analyzer);
-    analyzer.connect(context.destination)
+    analyzer.connect(context.destination);
     loop1();
   }
 
@@ -576,4 +577,57 @@ function audioVisualization() {
   }
 }
 
-audioVisualization()
+audioVisualization1()
+
+// Звуки из микрофона
+function audioVisualization2() {
+  let sectionLogo, num, array, width, context, logo, myElements, analyzer, src, height;
+
+  sectionLogo = document.querySelector("#section__logo2")
+
+  num = 32;
+
+  array = new Uint8Array(num * 2);
+
+  width = 10;
+
+  sectionLogo.onclick = function () {
+    if (context) return;
+
+    for (let i = 0; i < num; i++) {
+      logo = document.createElement("div");
+      logo.className = "logo2";
+      logo.style.background = "red";
+      logo.style.minWidth = width + "px";
+      sectionLogo.appendChild(logo);
+    }
+
+    myElements = document.getElementsByClassName("logo2")
+    context = new AudioContext();
+    analyzer = context.createAnalyser();
+    analyzer.connect(context.destination)
+    navigator.mediaDevices.getUserMedia({
+      audio: true
+    }).then(stream => {
+      src = context.createMediaStreamSource(stream);
+      src.connect(analyzer);
+      loop2();
+    }).catch(error => {
+      alert(error + "\r\n Отклонено.Страница будет обновлена!");
+      location.reload();
+    })
+  }
+
+  function loop2() {
+    window.requestAnimationFrame(loop2);
+    analyzer.getByteFrequencyData(array);
+    for (let i = 0; i < num; i++) {
+      height = array[i + num];
+      myElements[i].style.minHeight = height + "px";
+      myElements[i].style.opacity = 0.008 * height;
+    }
+  }
+}
+
+audioVisualization2();
+
