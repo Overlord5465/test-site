@@ -577,7 +577,7 @@ function audioVisualization1() {
   }
 }
 
-audioVisualization1()
+audioVisualization1();
 
 // Звуки из микрофона
 function audioVisualization2() {
@@ -630,4 +630,3 @@ function audioVisualization2() {
 }
 
 audioVisualization2();
-
