@@ -13,6 +13,40 @@
 @import "pad.css" screen and (min-width: 600px) and (max-width: 1200px);
 @import "desktop.css" screen and (min-width: 1200px);
 
+@font-face {
+  font-family: "Lobster";
+  src: url("Lobster/Lobster-Regular.ttf");
+}
+
+#phrases * {
+  text-align: center;
+}
+
+#phrases> :nth-child(even) {
+  background-color: #4fb9e3;
+}
+
+#phrases> :nth-child(2n+3) {
+  background-color: #05ff0a;
+}
+
+#phrases td {
+  text-align: center;
+  width: 50%;
+}
+
+#red_cub {
+  width: 200px;
+  height: 200px;
+  background: rgb(0, 255, 0);
+  transition: transform 10s;
+}
+
+#red_cub:hover {
+  transform: rotate(3600deg);
+  background: red;
+}
+
 #tanaka {
   width: 34rem;
   height: 17rem;
