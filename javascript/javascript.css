@@ -1,0 +1,197 @@
+/* ----------------Board Battleship---------- */
+
+#board {
+  position: relative;
+  width: 1024px;
+  height: 830px;
+  margin: auto;
+  background-image: url("images/board.jpg");
+}
+
+#board #messageArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(83, 175, 19);
+}
+
+#board table {
+  position: absolute;
+  left: 173px;
+  top: 98px;
+  border-spacing: 0;
+}
+
+#board td {
+  width: 94px;
+  height: 94px;
+}
+
+#board form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  background-color: rgb(83, 175, 19);
+}
+
+#board form input {
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(83, 175, 19);
+  font-size: 1em;
+}
+
+#board .hit {
+  background: url("images/ship.png") no-repeat center center;
+}
+
+#board .miss {
+  background: url("images/miss.png") no-repeat center center;
+}
+
+/* ----------------Audio logo---------------- */
+
+#logo1 {
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 50%;
+  background: red;
+}
+
+#logo2 {
+  margin: 2px;
+  border-radius: 30px;
+}
+
+#section__logo1,
+#section__logo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50vw;
+  min-height: 50vh;
+  background: #1e1e1e;
+  border: 5px solid rgb(165, 80, 1);
+}
+
+/* ----------------Tab----------------------- */
+
+#tab {
+  height: 50rem;
+}
+
+.info-box {
+  width: 30rem;
+  height: auto;
+  margin: 20px auto 0;
+}
+
+.info-box ul {
+  border: 1px solid #b60000;
+  overflow: hidden;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.info-box li {
+  float: left;
+  list-style-type: none;
+  width: 9.9rem;
+}
+
+.info-box a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  line-height: 3rem;
+  background: white;
+  color: #b60000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.info-box a:focus,
+.info-box a:hover {
+  background-color: #b60000;
+  color: white;
+}
+
+.info-box a.active {
+  background-color: #b60000;
+  color: white;
+}
+
+.info-box .panels {
+  clear: both;
+  position: relative;
+  height: auto;
+}
+
+.info-box article {
+  background-color: #b60000;
+  color: white;
+  position: absolute;
+  padding: 10px 20px;
+  height: 32rem;
+  top: 0;
+  left: 0;
+}
+
+.info-box .active-panel {
+  z-index: 1;
+}
+
+/* ----------------Zoom images--------------- */
+
+#zoom-img {
+  height: 50rem;
+}
+
+#zoom-img img+img {
+  margin-left: 0.5rem;
+}
+
+#zoom-img #lego {
+  position: relative;
+  top: 0.5rem;
+  width: 40rem;
+  height: 30rem;
+}
+
+#zoom-img #thumb0 {
+  width: 6.3rem;
+}
+
+#zoom-img #thumb1 {
+  width: 6.3rem;
+}
+
+#zoom-img #thumb2 {
+  width: 6.3rem;
+}
+
+#zoom-img #thumb3 {
+  width: 6.3rem;
+}
+
+#zoom-img #thumb4 {
+  width: 6.3rem;
+}
+
+#zoom-img #thumb5 {
+  width: 6.3rem;
+}
+
+#zoom-img .zoom {
+  position: relative;
+  bottom: 29.5rem;
+  width: 40rem;
+  height: 30rem;
+}
+
+
+
+
+

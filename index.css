@@ -1,0 +1,89 @@
+/* ----------------Animation text------------ */
+
+.animation22 {
+  position: absolute;
+}
+
+.animation20 {
+  overflow: hidden;
+  width: 400px;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.animation21 {
+  background-image: repeating-linear-gradient(45deg, #900 20px, #fc0 30px, #900 40px);
+  height: 40px;
+  width: 200%;
+  animation: 1.5s linear 0s infinite normal move_eye1;
+}
+
+@keyframes move_eye1 {
+  from {
+    margin-left: -50%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.animation1 {
+  background-image: linear-gradient(cyan, transparent),
+    linear-gradient(225deg, magenta, transparent),
+    linear-gradient(45deg, yellow, transparent);
+  width: 400px;
+  border-radius: 15px;
+}
+
+#f0::selection {
+  color: green;
+  background-color: lightblue;
+}
+
+.animation01 {
+  color: white;
+  position: absolute;
+}
+
+.animation0 {
+  width: 350px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: black;
+}
+
+#animation0 {
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.0) 25%, rgba(255, 0, 0, 0.9) 50%, rgba(255, 0, 0, 0.0) 75%);
+  height: 40px;
+  width: 20%;
+
+  animation: 2s linear 0s infinite alternate move_eye;
+}
+
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+
+  to {
+    margin-left: 100%;
+  }
+}
+
+/* ----------------Image Tanaka-------------- */
+
+#tanaka {
+  width: 34rem;
+  height: 17rem;
+
+  float: left;
+  margin-right: 3rem;
+  border: 5px dashed rgb(129, 129, 129);
+  border-radius: 50%;
+}
+
+
+
+

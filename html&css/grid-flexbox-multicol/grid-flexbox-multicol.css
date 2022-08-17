@@ -1,0 +1,95 @@
+/* ----------------Grid---------------------- */
+
+.wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
+.col {
+  background: #ff9696;
+}
+
+.span2 {
+  grid-column: auto/span 2;
+}
+
+.span3 {
+  grid-column: auto/span 3;
+}
+
+.span4 {
+  grid-column: auto/span 4;
+}
+
+.span5 {
+  grid-column: auto/span 5;
+}
+
+.span6 {
+  grid-column: auto/span 6;
+}
+
+.span7 {
+  grid-column: auto/span 7;
+}
+
+.span8 {
+  grid-column: auto/span 8;
+}
+
+.span9 {
+  grid-column: auto/span 9;
+}
+
+.span10 {
+  grid-column: auto/span 10;
+}
+
+.span11 {
+  grid-column: auto/span 11;
+}
+
+.span12 {
+  grid-column: auto/span 12;
+}
+
+.content {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-column: 3/9;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/5;
+}
+
+/* ----------------Multicol------------------ */
+.container {
+  -webkit-column-width: 12rem;
+  -moz-column-width: 12rem;
+  column-width: 12rem;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.card {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  background-color: #cfe8dc;
+  border: 2px solid #4fb9e3;
+  padding: 10px;
+  margin: 0 0 1em 0;
+}
+
+
+
+
+

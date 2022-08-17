@@ -24,9 +24,6 @@
     11px 11px 2px rgba(0, 0, 0, 0.7),
     15px 15px 1px purple,
     16px 16px 2px rgba(0, 0, 0, 0.7);
-  -webkit-animation: text-snake 1s infinite alternate;
-  -moz-animation: text-snake 1s infinite alternate;
-  -ms-animation: text-snake 1s infinite alternate;
   animation: text-snake 1s infinite alternate;
 }
 
