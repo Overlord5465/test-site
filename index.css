@@ -84,6 +84,11 @@
   border-radius: 50%;
 }
 
+/* ---------------------------------------------- */
+
+#salutation{
+  transform: rotate(10deg);
+}
 
 
 

@@ -863,21 +863,28 @@ function menuGame() {
   const canvasWidth = canvas.width = 1000;
   const canvasHeight = canvas.height = 600;
 
-  const name1 = "ping pong";
-  const name2 = "space ranger";
+  const namesGames = ["ping pong", "space ranger"];
+  const startButtons = [];
 
-  const startPP = new Button(canvasWidth / 2 - name1.length * 9, canvasHeight / 3, name1.length * 19, 50, name1);
 
-  const startSR = new Button(canvasWidth / 2 - name2.length * 9, canvasHeight / 3 + 100, name2.length * 18, 50, name2);
+  for( let i = 0; i < namesGames.length; i++)
+  {
+    startButtons[i] = new Button(canvasWidth / 2 - namesGames[i].length * 9, canvasHeight / 3 + 100 * i, namesGames[i].length * 19, 50, namesGames[i]);
+    
+    checkingMouse(startButtons[i]);
+  }
 
-  checkingMouse(startPP);
-  checkingMouse(startSR);
+
+  
   // main
   function drawMenu() {
     ctx.fillStyle = 'rgb(0, 0, 0)';
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-    startPP.draw("white", "green");
-    startSR.draw("white", "green");
+
+    for( let i = 0; i < startButtons.length; i++)
+    {
+      startButtons[i].draw("white", "green");
+    }
   }
 
   function checkingMouse(start) {
