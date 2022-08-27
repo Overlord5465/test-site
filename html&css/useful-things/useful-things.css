@@ -1,16 +1,173 @@
-/* ----------------Red cube------------------- */
+#container-for-cube {
+  width: auto;
+  height:500px;
+}
 
-#red_cube {
+#container-for-cube > :first-child {
+  position: relative;
+  top: 200px;
+  left: 440px;
   width: 200px;
   height: 200px;
-  background: rgb(0, 255, 0);
-  transition: transform 10s;
+  border: 1px solid black;
 }
 
-#red_cube:hover {
-  transform: rotate(3600deg);
-  background: red;
+
+#container-for-cube p{
+  display: inline-block;
+  position: relative;
+  font-size: 80px;
+  top: 10%;
+  color:white;
 }
+
+#container-for-cube > div > div {
+  border: 1px solid black;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  opacity: 0;
+  transition: all 2.5s;
+}
+
+#side_1 {
+  background-color: rgba(255, 0, 0, 0.5);
+  transform-origin: left;
+}
+
+#side_2 {
+  background-color: rgba(0, 255, 0, 0.5);
+  transform-origin: left;
+}
+
+#side_3 {
+  background-color: rgba(0, 0, 255, 0.5);
+  transform-origin: bottom;
+}
+
+#side_4 {
+  background-color: rgba(255, 255, 0, 0.5);
+  transform-origin: bottom;
+}
+
+#side_5 {
+  background-color: rgba(0, 255, 255, 0.5);
+  transform-origin: right;
+}
+
+#side_6 {
+  background-color: rgba(255, 0, 255, 0.5);
+  transform-origin: right;
+}
+
+#transparent-cube #side_1 {
+  transform-origin: left;
+  transform: translate(200px) skew(0, -45deg) scaleX(0.5);
+  opacity: 1;
+}
+
+#transparent-cube #side_2 {
+  transform-origin: left;
+  transform: skew(0, -45deg) scaleX(0.5);
+  opacity: 1;
+}
+
+#transparent-cube #side_3 {
+  transform-origin: bottom;
+  transform: translate(0, -200px) skew(-45deg, 0) scaleY(0.5);
+  opacity: 1;
+}
+
+#transparent-cube #side_4 {
+  transform-origin: bottom;
+  transform: skew(-45deg, 0) scaleY(0.5);
+  opacity: 1;
+}
+
+#transparent-cube #side_5 {
+  transform-origin: right;
+  transform: translate(100px, -100px);
+  opacity: 0.5;
+}
+
+#transparent-cube #side_6 {
+  transform-origin: right;
+  opacity: 1;
+}
+
+#circular-motion-animation > * {
+  transform-origin: center center;
+}
+
+#circular-motion-animation #side_1{
+  animation: 12s linear 0.75s infinite normal circular-motion-animation,
+  0.75s linear 0s 1 normal start;
+  opacity: 1;
+}
+
+#circular-motion-animation #side_2{
+  animation: 12s linear 2.75s infinite normal circular-motion-animation,
+  0.75s linear 2s 1 normal start;
+  opacity: 1;
+}
+
+#circular-motion-animation #side_3{
+  animation: 12s linear 4.75s infinite normal circular-motion-animation,
+  0.75s linear 4s 1 normal start;
+  opacity: 1;
+}
+
+#circular-motion-animation #side_4{
+  animation: 12s linear 6.75s infinite normal circular-motion-animation,
+  0.75s linear 6s 1 normal start;
+  opacity: 1;
+}
+
+#circular-motion-animation #side_5{
+  animation: 12s linear 8.75s infinite normal circular-motion-animation,
+  0.75s linear 8s 1 normal start;
+  opacity: 1;
+}
+
+#circular-motion-animation #side_6{
+  animation: 12s linear 10.75s infinite normal circular-motion-animation,
+  0.75s linear 10s 1 normal start;
+  opacity: 1;
+}
+
+@keyframes start {
+  from {}
+  to {transform: translate(300px, 0);}
+}
+
+@keyframes circular-motion-animation {
+  0%, 100%{transform: translate(300px, 0);}
+
+  8.3% {transform: translate(300px, 0) scale(0.5);}
+
+  16.6% {transform: translate(150px, -260px);}
+
+  25% {transform: translate(150px, -260px) scale(0.5);}
+  
+  33.3% {transform: translate(-150px, -260px);}
+
+  41.6% {transform: translate(-150px, -260px) scale(0.5);}
+  
+  50% {transform: translate(-300px, 0);}
+
+  58.3% {transform: translate(-300px, 0) scale(0.5);}
+  
+  66.6% {transform: translate(-150px, 260px);}
+
+  75% {transform: translate(-150px, 260px) scale(0.5);}
+  
+  83.3% {transform: translate(150px, 260px);}
+
+  91.6% {transform: translate(150px, 260px) scale(0.5);}
+}
+
+
 
 
 

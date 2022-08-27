@@ -18,6 +18,10 @@
   src: url("Lobster/Lobster-Regular.ttf");
 }
 
+html * {
+  box-sizing: border-box;
+}
+
 hr {
   margin-top: 20px;
 }
