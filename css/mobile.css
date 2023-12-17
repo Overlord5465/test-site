@@ -23,3 +23,16 @@ audio {
   width: 100%;
   max-width: 265px;
 }
+
+.body__nav,
+.body__aside {
+  position: absolute;
+  top:0px;
+  opacity: 0;
+}
+
+.body__nav *,
+.body__aside * {
+  margin: 0px;
+  padding-left: 0rem;
+}
